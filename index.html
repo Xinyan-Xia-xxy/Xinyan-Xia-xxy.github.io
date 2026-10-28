@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>夏昕妍 · Xinyan Xia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: photographs first. Warm ivory paper, deep forest only where the mountain or the
+   stage needs it, honey as the single accent. Chapters alternate ivory / linen; detail lives in windows. */
+:root{
+  --paper:#F5F2EA; --paper-2:#EDE8DC; --card:#FCFAF4; --line:#DCD5C4;
+  --ink:#24271F; --ink-soft:#5E6256; --ink-faint:#8E9184;
+  --pine:#2F4A3A; --pine-deep:#17251C; --moss:#7A9468; --moss-soft:#D5DCC6;
+  --honey:#D8A23F; --honey-deep:#A3722A; --wax:#F3E2A8;
+  --stage:#1A1F1A; --stage-2:#242B24;
+  --serif-sc:"Noto Serif SC","Songti SC",serif;
+  --sans-sc:"Noto Sans SC","PingFang SC","Helvetica Neue",sans-serif;
+  --display:"Fraunces","Georgia",serif;
+  --mono:"IBM Plex Mono","SFMono-Regular",Menlo,monospace;
+  --wrap:1120px; --r:18px; --r-sm:10px;
+  --shadow:0 26px 56px -30px rgba(36,39,31,.45);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#15181A; --paper-2:#1B1F20; --card:#20262A; --line:#30383A;
+    --ink:#ECE9DF; --ink-soft:#B0B3A8; --ink-faint:#7A8077;
+    --pine:#3C5A48; --pine-deep:#0E1612; --moss:#8CA87A; --moss-soft:#33402F;
+    --honey:#E0B04F; --honey-deep:#C88F35; --wax:#4D3F1C;
+    --stage:#0B0F0C; --stage-2:#151B16;
+    --shadow:0 26px 56px -30px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15181A; --paper-2:#1B1F20; --card:#20262A; --line:#30383A;
+  --ink:#ECE9DF; --ink-soft:#B0B3A8; --ink-faint:#7A8077;
+  --pine:#3C5A48; --pine-deep:#0E1612; --moss:#8CA87A; --moss-soft:#33402F;
+  --honey:#E0B04F; --honey-deep:#C88F35; --wax:#4D3F1C;
+  --stage:#0B0F0C; --stage-2:#151B16;
+  --shadow:0 26px 56px -30px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans-sc);background:var(--paper);color:var(--ink);line-height:1.8;font-size:15.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--pine-deep)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:2.5px solid var(--honey);outline-offset:3px;border-radius:4px}
+::selection{background:var(--wax);color:var(--pine-deep)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.en{font-family:var(--display);font-style:italic;font-weight:400}
+.sub-en{display:block;font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-soft);font-size:.92em;margin-top:4px}
+h1,h2,h3,h4{text-wrap:balance}
+
+/* photographic placeholders: duotone + grain, photo sits on top and hides itself if it fails */
+.ph{position:relative;overflow:hidden;background:var(--pine)}
+.ph::before{content:"";position:absolute;inset:0;background:var(--ph,linear-gradient(160deg,#4E6B55 0%,#2F4A3A 55%,#17251C 100%))}
+.ph::after{content:"";position:absolute;inset:0;opacity:.18;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='.9'/></svg>")}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.ph-forest{--ph:linear-gradient(160deg,#6E8A6A 0%,#3B5A45 50%,#1A2A20 100%)}
+.ph-honey{--ph:linear-gradient(160deg,#E6B860 0%,#A9742C 55%,#4A3312 100%)}
+.ph-mist{--ph:linear-gradient(180deg,#C9CFC3 0%,#7F917E 60%,#3F5245 100%)}
+.ph-stage{--ph:radial-gradient(70% 90% at 50% 100%,#5A4A1E 0%,#2A2A22 55%,#111412 100%)}
+.ph-wall{--ph:linear-gradient(160deg,#9C9382 0%,#6B6657 55%,#3B3A33 100%)}
+.ph-sat{--ph:linear-gradient(160deg,#3E5B49 0%,#1E2C24 60%,#0F1713 100%)}
+
+/* ───────── NAV ───────── */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;background:color-mix(in srgb,var(--paper) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:var(--wrap);margin:0 auto;padding:12px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif-sc);font-weight:600;font-size:1rem}
+.brand svg{width:24px;height:24px;flex:none}
+.nav{display:flex;gap:22px;font-size:.84rem;color:var(--ink-soft)}
+.nav a{position:relative;padding:2px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:-3px;height:1.5px;width:0;background:var(--honey);transition:width .25s}
+.nav a:hover::after{width:100%}
+
+/* ───────── HERO ───────── */
+.hero{position:relative;background:#0d281f;color:#EEF1E7;overflow:hidden;min-height:min(92vh,860px);display:flex;align-items:center}
+/* 人物照片直接作为首屏背景：左侧渐隐进深绿，底部渐隐进纸色，不加相框 */
+.hero-photo{position:absolute;top:-4%;right:0;bottom:-4%;width:78%;will-change:transform;pointer-events:none}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:8% 45%;display:block;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 42%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 42%)}
+.hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,#0d281f 0%,rgba(13,40,31,.92) 26%,rgba(13,40,31,.45) 44%,rgba(13,40,31,0) 62%),
+             linear-gradient(180deg,rgba(13,40,31,.18) 0%,rgba(13,40,31,0) 30%,rgba(13,40,31,0) 62%,rgba(19,66,56,.55) 88%,#17251C 100%)}
+.hero-grain{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='.7'/></svg>")}
+.hero-mist{position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(180deg,transparent,var(--paper));z-index:5}
+.hero-in{position:relative;z-index:6;width:100%;max-width:var(--wrap);margin:0 auto;padding:110px max(16px,env(safe-area-inset-right,0px)) 190px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:minmax(0,560px) 1fr;gap:48px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wax);margin-bottom:22px}
+.hero-eyebrow i{width:28px;height:1px;background:var(--wax);display:block}
+.hero h1{font-family:var(--serif-sc);font-weight:700;font-size:clamp(3rem,7vw,5.4rem);line-height:1.02;color:#FBFCF6;letter-spacing:.02em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero h1 .en{display:block;font-size:clamp(1.1rem,2.3vw,1.5rem);color:var(--wax);letter-spacing:.04em;margin-top:12px;text-shadow:none}
+.hero-hi{font-family:var(--display);font-style:italic;font-size:clamp(1.1rem,2vw,1.35rem);color:var(--wax);margin:34px 0 10px;letter-spacing:.01em}
+.hero-hi .zh{font-family:var(--serif-sc);font-style:normal;color:#E3EADA;margin-left:10px;font-weight:500}
+.hero-sub{max-width:520px;color:#DCE4D3;font-size:1.02rem;line-height:1.85;font-family:var(--serif-sc)}
+.hero-sub+.hero-sub{margin-top:10px}
+.hero-sub .en{display:block;color:#A3B39B;font-size:.9rem;margin-top:5px;font-family:var(--display);font-style:italic;line-height:1.6}
+.kw{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;max-width:560px}
+.kw span{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;border:1px solid rgba(243,226,168,.3);background:rgba(13,40,31,.45);color:#EEF1E7;font-size:.82rem;backdrop-filter:blur(4px);transition:transform .25s,background .25s}
+.kw span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--honey)}
+.kw span:hover{transform:translateY(-2px);background:rgba(243,226,168,.18)}
+.hero-cap{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:150px;z-index:6;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,226,168,.7)}
+
+/* stat strip */
+.stats{position:relative;z-index:7;margin-top:-100px}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.stat{padding:22px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;color:var(--pine);line-height:1;font-variant-numeric:tabular-nums}
+.stat b small{font-size:.9rem;color:var(--honey-deep);margin-left:4px}
+.stat span{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:8px;line-height:1.5}
+.stat span em{display:block;font-family:var(--display);font-size:.8rem;color:var(--ink-faint)}
+
+/* ───────── CHAPTER HEADS ───────── */
+.chapter{padding:110px 0 60px;position:relative}
+.chapter.alt{background:var(--paper-2)}
+.ch-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:46px;max-width:900px}
+.ch-num{font-family:var(--display);font-weight:300;font-size:clamp(4rem,10vw,7rem);line-height:.85;color:var(--moss-soft);transform:perspective(600px) rotateX(18deg) translateY(6px);transform-origin:bottom;letter-spacing:-.04em}
+.ch-kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--honey-deep);margin-bottom:10px}
+.ch-title{font-family:var(--serif-sc);font-weight:700;color:var(--ink);font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.25}
+.ch-title .en{display:block;font-size:1.05rem;color:var(--moss);margin-top:8px}
+.ch-lead{color:var(--ink-soft);margin-top:16px;font-size:1rem;max-width:64ch}
+.ch-lead .en{display:block;color:var(--ink-faint);font-size:.95rem;margin-top:6px}
+
+/* ───────── STORY: field vs stage ───────── */
+.story{display:grid;grid-template-columns:1fr 60px 1fr;align-items:stretch}
+.col{position:relative;padding:32px 30px 34px;border-radius:var(--r);overflow:hidden;min-width:0}
+.col-field{background:var(--card);border:1px solid var(--line)}
+.col-field::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px;opacity:.3;mask-image:linear-gradient(180deg,rgba(0,0,0,.6),transparent 55%);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.6),transparent 55%)}
+.col-stage{background:var(--stage);color:#E8EADF;border:1px solid rgba(243,226,168,.14)}
+.col-stage::before{content:"";position:absolute;inset:-40% -20% auto -20%;height:70%;background:radial-gradient(60% 60% at 50% 100%,rgba(243,226,168,.22),transparent 70%);transform:perspective(600px) rotateX(55deg);pointer-events:none}
+.col > *{position:relative;z-index:1}
+.col-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.col-field .col-label{color:var(--moss)}
+.col-stage .col-label{color:var(--honey)}
+.col-label i{width:22px;height:1px;background:currentColor;display:block}
+.col h3{font-family:var(--serif-sc);font-weight:700;font-size:1.4rem;line-height:1.35;margin-bottom:4px}
+.col .h3en{font-family:var(--display);font-style:italic;font-size:.95rem;margin-bottom:14px;line-height:1.5}
+.col-field .h3en{color:var(--moss)}
+.col-stage .h3en{color:var(--honey)}
+.col p.lead{font-size:.95rem;margin-bottom:18px}
+.col-field p.lead{color:var(--ink-soft)}
+.col-stage p.lead{color:#B9C4B0}
+.col p.lead .en{display:block;font-size:.9rem;margin-top:6px;opacity:.85}
+
+.spine{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;position:relative}
+.spine::before{content:"";position:absolute;top:30px;bottom:30px;width:1px;background:linear-gradient(180deg,var(--moss),var(--honey));opacity:.6}
+.spine-step{position:relative;z-index:1;width:46px;height:46px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif-sc);font-size:.72rem;color:var(--ink-soft);box-shadow:0 6px 16px -8px rgba(0,0,0,.4);text-align:center;line-height:1.1}
+.spine-step.hot{background:var(--honey);border-color:var(--honey);color:#24271F}
+.spine-step.cool{background:var(--moss);border-color:var(--moss);color:#fff}
+.spine-arrow{position:relative;z-index:1;color:var(--ink-faint);font-family:var(--display);font-style:italic;font-size:.72rem;writing-mode:vertical-rl;letter-spacing:.08em}
+
+.trips{display:flex;flex-direction:column;gap:12px;margin:14px 0 22px}
+.trip{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:start}
+.trip .d{font-family:var(--mono);font-size:.66rem;color:var(--honey-deep);letter-spacing:.06em;padding-top:5px;line-height:1.4}
+.trip b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--ink);font-size:.96rem}
+.trip small{color:var(--ink-soft);font-size:.83rem;display:block}
+.trip small .en{display:block;color:var(--ink-faint)}
+
+.findings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 20px}
+.find{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px}
+.find b{display:block;font-family:var(--display);font-weight:500;font-size:1.5rem;color:var(--pine);line-height:1;font-variant-numeric:tabular-nums}
+.find b em{font-style:normal;font-size:.85rem;color:var(--honey-deep)}
+.find span{display:block;font-size:.78rem;color:var(--ink-soft);margin-top:5px;line-height:1.45}
+.find span .en{display:block;color:var(--ink-faint);font-size:.76rem}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tiles.one{grid-template-columns:1fr}
+.tile{position:relative;display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;background:var(--card);cursor:pointer;transition:transform .3s,box-shadow .3s;transform-style:preserve-3d}
+.tile:hover{box-shadow:0 22px 40px -24px rgba(0,0,0,.5)}
+.col-stage .tile{border-color:rgba(243,226,168,.18);background:var(--stage-2)}
+.media{aspect-ratio:16/10;max-width:100%}
+.media.tall{aspect-ratio:4/3}
+.media img{transition:transform .6s}
+.tile:hover .media img{transform:scale(1.05)}
+.media .veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,37,28,0) 45%,rgba(23,37,28,.6))}
+.badge{position:absolute;top:10px;left:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;background:rgba(23,37,28,.78);color:#F1F5EA;font-size:.7rem;letter-spacing:.06em;padding:4px 10px;border-radius:999px;backdrop-filter:blur(3px)}
+.badge svg{width:12px;height:12px}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:54px;height:54px;border-radius:50%;background:rgba(252,250,244,.92);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.6)}
+.play svg{width:20px;height:20px;margin-left:3px;fill:var(--pine)}
+.tile-body{padding:13px 15px 15px}
+.tile-body b{display:block;font-family:var(--serif-sc);font-weight:600;font-size:.96rem;line-height:1.4;color:var(--ink)}
+.col-stage .tile-body b{color:#F1F5EA}
+.tile-body small{display:block;color:var(--ink-soft);font-size:.78rem;margin-top:3px}
+.col-stage .tile-body small{color:#A7B5A0}
+.tile-open{position:absolute;right:10px;bottom:10px;z-index:3;width:30px;height:30px;border-radius:50%;background:rgba(252,250,244,.92);display:grid;place-items:center}
+.tile-open svg{width:14px;height:14px;stroke:var(--pine);stroke-width:2;fill:none}
+
+.arts{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.art{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;background:rgba(243,226,168,.06);border:1px solid rgba(243,226,168,.16);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:background .25s,transform .25s}
+.art:hover{background:rgba(243,226,168,.14);transform:translateX(4px)}
+.art .n{font-family:var(--display);font-style:italic;color:var(--honey);font-size:1.2rem}
+.art b{display:block;font-family:var(--serif-sc);font-weight:600;color:#F1F5EA;font-size:.94rem;line-height:1.4}
+.art small{color:#A7B5A0;font-size:.78rem;font-family:var(--display);font-style:italic}
+.art .arr{color:var(--honey);font-size:1.1rem}
+.quote{margin-top:22px;border-left:2px solid var(--honey);padding:4px 0 4px 16px;font-family:var(--serif-sc);color:#E8EADF;font-size:1rem;line-height:1.7}
+.quote .en{display:block;font-size:.9rem;color:#B9C4B0;margin-top:4px}
+.quote cite{display:block;font-style:normal;font-size:.72rem;color:#8C9C85;margin-top:8px;font-family:var(--mono)}
+
+/* ───────── CHAPTER 2 ───────── */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0 0 28px;position:relative;overflow:hidden;min-width:0}
+.panel-hero{aspect-ratio:16/8;max-width:100%}
+.panel-hero .veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,37,28,.05),rgba(23,37,28,.55))}
+.panel-hero .lab-tag{position:absolute;left:16px;bottom:12px;z-index:3;color:#F1F5EA;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase}
+.panel-body{padding:24px 28px 0}
+.panel-kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--honey-deep);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.panel-kicker i{width:20px;height:1px;background:currentColor}
+.panel h3{font-family:var(--serif-sc);font-weight:700;font-size:1.38rem;color:var(--ink);line-height:1.35}
+.panel .h3en{font-family:var(--display);font-style:italic;color:var(--moss);font-size:.95rem;margin:4px 0 14px;line-height:1.5}
+.panel p{color:var(--ink-soft);font-size:.94rem;margin-bottom:16px}
+.panel p .en{display:block;color:var(--ink-faint);font-size:.9rem;margin-top:6px}
+.acts{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.act{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;width:100%;text-align:left;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:transform .25s,border-color .25s}
+.act:hover{transform:translateX(4px);border-color:var(--moss)}
+.act .ico{width:44px;height:44px;border-radius:11px;background:var(--moss-soft);display:grid;place-items:center}
+.act .ico svg{width:24px;height:24px}
+.act b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--ink);font-size:.95rem;line-height:1.4}
+.act small{display:block;color:var(--ink-soft);font-size:.78rem;margin-top:2px;font-family:var(--display);font-style:italic}
+.act .num{font-family:var(--display);color:var(--honey-deep);font-weight:500;font-size:1.05rem;margin-right:4px}
+.lab-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.lab-stats .find b{font-size:1.4rem}
+
+/* ───────── CHAPTER 3 ───────── */
+.tek{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}
+.wheel-box{position:relative;aspect-ratio:1/1;max-width:100%;perspective:900px;display:grid;place-items:center}
+.wheel{width:92%;height:92%;transform:rotateX(52deg);transform-style:preserve-3d;animation:spin 90s linear infinite}
+@keyframes spin{from{transform:rotateX(52deg) rotateZ(0)}to{transform:rotateX(52deg) rotateZ(360deg)}}
+.wheel svg{width:100%;height:100%;overflow:visible}
+.wheel-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.wheel-tag b{display:block;font-family:var(--serif-sc);font-weight:700;color:var(--ink);font-size:1.5rem}
+.wheel-tag span{font-family:var(--display);font-style:italic;color:var(--moss);font-size:.9rem}
+.terms{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:18px}
+.term{text-align:center;padding:10px 4px;border-radius:9px;background:var(--card);border:1px solid var(--line);cursor:pointer;transition:transform .25s,border-color .25s}
+.term:hover{transform:translateY(-3px);border-color:var(--moss)}
+.term b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--pine);font-size:.95rem}
+.term small{display:block;font-family:var(--display);font-style:italic;font-size:.6rem;color:var(--ink-faint);line-height:1.2;margin-top:2px}
+.term.shift{background:var(--wax);border-color:var(--honey)}
+.term.shift b{color:var(--honey-deep)}
+.legend{font-size:.78rem;color:var(--ink-soft);margin-top:10px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;background:var(--wax);border:1px solid var(--honey)}
+.legend .en{display:block;color:var(--ink-faint)}
+.club{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.club-hero{aspect-ratio:16/8;max-width:100%}
+.club-hero .veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,37,28,.05),rgba(23,37,28,.5))}
+.club-body{padding:24px 28px 28px}
+.club-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 18px}
+.sub-list{display:flex;flex-direction:column;gap:10px}
+.sub-item{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:transform .25s,border-color .25s}
+.sub-item:hover{transform:translateX(4px);border-color:var(--moss)}
+.sub-item .n{font-family:var(--display);font-style:italic;color:var(--moss);font-size:1.1rem}
+.sub-item b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--ink);font-size:.94rem}
+.sub-item small{color:var(--ink-soft);font-size:.78rem;font-family:var(--display);font-style:italic}
+.sub-item .arr{color:var(--moss)}
+.wisdom{margin-top:26px;position:relative;border-radius:var(--r);overflow:hidden;min-height:260px;display:flex;align-items:flex-end}
+.wisdom .ph{position:absolute;inset:0}
+.wisdom .ph img{filter:saturate(.8)}
+.wisdom .shade{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,37,28,.15),rgba(23,37,28,.85))}
+.wisdom .w-in{position:relative;z-index:3;padding:40px 40px 34px;color:#F1F5EA}
+.wisdom blockquote{font-family:var(--serif-sc);font-size:1.25rem;line-height:1.7;max-width:640px;font-weight:500}
+.wisdom blockquote .en{display:block;font-size:1rem;color:#D4DCCB;margin-top:8px;font-weight:400}
+.wisdom cite{display:block;margin-top:12px;font-style:normal;font-family:var(--mono);font-size:.72rem;color:#AEBBA6}
+
+/* ───────── MORE ───────── */
+.more{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.more .m{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:18px 18px 16px;transition:transform .3s,box-shadow .3s}
+.more .m:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.more .m .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--honey-deep)}
+.more .m b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--ink);margin:8px 0 6px;font-size:1rem;line-height:1.4}
+.more .m p{color:var(--ink-soft);font-size:.82rem;margin:0}
+.more .m p .en{display:block;color:var(--ink-faint);margin-top:4px}
+
+/* ───────── FOOTER ───────── */
+.foot{position:relative;color:#C9D6BE;padding:90px 0 50px;margin-top:70px;overflow:hidden;background:var(--pine-deep)}
+.foot .ph{position:absolute;inset:0}
+.foot .ph img{opacity:.55}
+.foot .shade{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,37,28,.3),rgba(23,37,28,.92))}
+.foot-in{position:relative;z-index:3}
+.foot-q{font-family:var(--serif-sc);font-size:clamp(1.3rem,3vw,1.8rem);color:#F1F5EA;font-weight:500;max-width:640px;line-height:1.6}
+.foot-q .en{display:block;font-size:1rem;color:#AEBBA6;margin-top:12px}
+.foot-meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(201,214,190,.2);font-size:.85rem}
+.foot-note{margin-top:22px;font-size:.72rem;color:#8E9D86;font-family:var(--mono)}
+
+/* ───────── MODALS ───────── */
+.modal{position:fixed;inset:0;z-index:200;display:none;padding:36px max(12px,env(safe-area-inset-right,0px)) 36px max(12px,env(safe-area-inset-left,0px));overflow-y:auto}
+.modal.open{display:flex;align-items:flex-start;justify-content:center}
+.veil-bg{position:fixed;inset:0;background:rgba(10,14,11,.62);backdrop-filter:blur(6px);animation:fade .25s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.win{position:relative;z-index:2;width:100%;max-width:860px;background:var(--card);border-radius:16px;box-shadow:0 50px 100px -30px rgba(0,0,0,.7);overflow:hidden;margin:auto;animation:pop .35s cubic-bezier(.2,.9,.3,1.1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+.win-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--paper-2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.dots{display:flex;gap:6px}
+.dots i{width:10px;height:10px;border-radius:50%;display:block}
+.dots i:nth-child(1){background:#D98B7A}.dots i:nth-child(2){background:var(--honey)}.dots i:nth-child(3){background:var(--moss)}
+.win-url{flex:1;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win-close{width:30px;height:30px;border:0;background:transparent;border-radius:8px;cursor:pointer;font-size:1.3rem;color:var(--ink-soft);display:grid;place-items:center}
+.win-close:hover{background:var(--line);color:var(--ink)}
+.win-video{aspect-ratio:16/9;max-width:100%}
+.win-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:4}
+.win-video .veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(16,27,20,.1),rgba(16,27,20,.6))}
+.win-video .play{width:72px;height:72px}
+.win-video .play svg{width:26px;height:26px}
+.win-video .vlabel{position:absolute;left:18px;bottom:14px;z-index:3;color:#F1F5EA}
+.win-video .vlabel span{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.win-video .vlabel h3{font-family:var(--serif-sc);font-size:1.12rem;font-weight:600}
+.win-video .vlabel h3 .en{display:block;font-size:.88rem;color:#D4DCCB}
+.article{padding:30px 40px 42px}
+.article .meta{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--ink-soft);padding-bottom:14px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.article .meta b{color:var(--honey-deep);font-weight:500}
+.article h2{font-family:var(--serif-sc);font-weight:700;color:var(--ink);font-size:1.55rem;line-height:1.4;margin-bottom:4px}
+.article h2 .en{display:block;font-size:1.05rem;color:var(--moss);margin-top:4px}
+.article .lede{font-size:1rem;color:var(--ink);font-weight:500;margin:14px 0 18px;max-width:64ch}
+.article .inshort{background:var(--paper-2);border-left:3px solid var(--honey);border-radius:0 8px 8px 0;padding:12px 16px;margin:0 0 20px;font-size:.92rem;color:var(--ink);max-width:66ch}
+.article .inshort b{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--honey-deep);display:block;margin-bottom:4px}
+.article h4{font-family:var(--serif-sc);color:var(--pine);font-weight:600;font-size:1.06rem;margin:24px 0 10px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.article h4::before{content:"";width:14px;height:2px;background:var(--honey)}
+.article h4 .en{font-size:.92rem;color:var(--moss);font-weight:400}
+.article p{font-size:.95rem;color:var(--ink);margin-bottom:14px;max-width:68ch}
+.article ul{margin:0 0 14px 18px;color:var(--ink);font-size:.94rem}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:3px solid var(--moss);background:var(--paper-2);padding:12px 18px;border-radius:0 8px 8px 0;color:var(--pine);font-family:var(--serif-sc);margin:16px 0;max-width:62ch}
+.article blockquote .en{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:4px}
+.article figure{margin:18px 0}
+.article figure .fig{border-radius:12px;aspect-ratio:16/9;max-width:100%}
+.article figcaption{font-size:.78rem;color:var(--ink-soft);margin-top:7px;text-align:center;font-style:italic}
+.note{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);background:var(--paper-2);border:1px dashed var(--line);border-radius:8px;padding:9px 12px;margin-bottom:18px;line-height:1.6}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.gallery figure{margin:0;border-radius:10px;aspect-ratio:4/3;max-width:100%}
+.gallery figure:has(video) figcaption{top:0;bottom:auto;background:linear-gradient(180deg,rgba(16,27,20,.75),transparent);pointer-events:none}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:7px 10px;font-size:.72rem;color:#F1F5EA;background:linear-gradient(180deg,transparent,rgba(16,27,20,.8))}
+.data-table{width:100%;border-collapse:collapse;font-size:.86rem;margin:12px 0 18px;font-variant-numeric:tabular-nums}
+.data-table th,.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+.data-table th{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.data-table td b{color:var(--honey-deep)}
+.tscroll{overflow-x:auto}
+.screenplay{background:var(--stage);color:#DCE6D2;border-radius:12px;padding:26px 30px;margin:20px 0;font-family:var(--serif-sc)}
+.screenplay .ft{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--honey);margin-bottom:14px}
+.screenplay .sp-scene{font-family:var(--mono);color:var(--moss);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin:14px 0 8px}
+.screenplay .sp-action{color:#B9C7AF;font-size:.92rem;line-height:1.8;margin-bottom:10px;max-width:none}
+.screenplay .sp-char{text-align:center;color:#F1F5EA;font-weight:600;letter-spacing:.1em;margin:12px 0 2px}
+.screenplay .sp-line{text-align:center;color:#DCE6D2;max-width:560px;margin:0 auto 4px}
+.screenplay .sp-line.en{display:block;font-family:var(--display);font-style:italic;color:#A7B5A0;font-size:.9rem;margin-bottom:10px}
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.cast div{background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:12px}
+.cast b{display:block;font-family:var(--serif-sc);color:var(--ink);font-size:.92rem}
+.cast small{color:var(--ink-soft);font-size:.76rem;line-height:1.45;display:block}
+
+.reveal{opacity:1;transform:none;transition:opacity .7s,transform .7s}
+.reveal.pre{opacity:0;transform:translateY(22px)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .hero{min-height:0;display:block}
+  .hero-photo{top:0;right:0;left:0;bottom:auto;width:100%;height:62vw;min-height:300px;max-height:520px}
+  .hero-photo img{object-position:46% 30%;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
+  .hero-tint{background:linear-gradient(180deg,rgba(13,40,31,.1) 0%,rgba(13,40,31,0) 20%,rgba(13,40,31,.35) 40%,#0d281f 60%,#17251C 100%)}
+  .hero-in{grid-template-columns:1fr;padding:min(56vw,440px) 16px 140px;gap:0}
+  .hero-cap{display:none}
+  .stats-in{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+  .story{grid-template-columns:1fr}
+  .spine{flex-direction:row;padding:14px 0}
+  .spine::before{top:auto;bottom:auto;left:30px;right:30px;height:1px;width:auto;background:linear-gradient(90deg,var(--moss),var(--honey))}
+  .spine-arrow{writing-mode:horizontal-tb}
+  .duo,.tek{grid-template-columns:1fr}
+  .more{grid-template-columns:1fr 1fr}
+  .terms{grid-template-columns:repeat(4,1fr)}
+  .nav{display:none}
+}
+@media(max-width:600px){
+  .hero-in{padding-top:min(52vw,380px)}
+  .ch-head{grid-template-columns:1fr;gap:10px}
+  .ch-num{transform:none;font-size:3.6rem}
+  .col{padding:24px 18px}
+  .findings,.tiles,.gallery,.club-stats{grid-template-columns:1fr}
+  .lab-stats{grid-template-columns:1fr 1fr}
+  .terms{grid-template-columns:repeat(3,1fr)}
+  .more{grid-template-columns:1fr}
+  .article{padding:22px 18px 30px}
+  .cast{grid-template-columns:1fr 1fr}
+  .stats{margin-top:-80px}
+  .chapter{padding:70px 0 40px}
+  .panel-body,.club-body{padding:20px 18px 0}
+  .wisdom .w-in{padding:28px 20px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal.pre{opacity:1;transform:none}
+  .hero-photo{transform:none!important}
+}
+
+/* snapshots strip */
+.snaps{position:relative;z-index:7;margin-top:-20px;padding-bottom:10px}
+.snaps-head{display:flex;align-items:baseline;gap:18px;margin:0 0 18px 4px;flex-wrap:wrap}
+.snaps-head .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--honey-deep)}
+.snaps-head h2{font-family:var(--serif-sc);font-weight:700;font-size:1.3rem;color:var(--ink)}
+.snaps-head h2 .en{display:block;font-size:.95rem;color:var(--moss);font-weight:400}
+.snaps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.snap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.snap .main{aspect-ratio:16/10;max-width:100%;background:#0d281f}
+.snap .main video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;background:#000}
+.snap .main .tag{position:absolute;left:12px;top:12px;z-index:4;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:#F1F5EA;background:rgba(16,27,20,.62);padding:5px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.snap .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px}
+.snap .thumbs .ph{aspect-ratio:4/3;border-radius:8px}
+.snap .thumbs .ph img{transition:transform .6s}
+.snap .thumbs .ph:hover img{transform:scale(1.05)}
+.snap .txt{padding:14px 18px 18px}
+.snap .txt b{display:block;font-family:var(--serif-sc);font-weight:600;color:var(--ink);font-size:1rem;line-height:1.4}
+.snap .txt p{color:var(--ink-soft);font-size:.84rem;margin:6px 0 0}
+.snap .txt p .en{display:block;color:var(--ink-faint);margin-top:3px}
+.col-video{position:relative;aspect-ratio:16/9;border-radius:var(--r-sm);overflow:hidden;background:#000;margin:0 0 16px;border:1px solid var(--line)}
+.col-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.col-video .vtag{position:absolute;left:12px;top:12px;z-index:2;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:#F1F5EA;background:rgba(16,27,20,.62);padding:5px 9px;border-radius:999px;pointer-events:none}
+.ch-lead.story-lead{max-width:72ch}
+.ch-lead.story-lead p{margin-bottom:12px}
+.ch-lead.story-lead p .en{display:block;color:var(--ink-faint);font-size:.95rem;margin-top:5px}
+@media(max-width:960px){.snaps{margin-top:0}.snaps-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z" fill="#D8A23F"/><path d="M12 7 L16.5 9.5 L16.5 14.5 L12 17 L7.5 14.5 L7.5 9.5 Z" fill="#17251C"/></svg>
+      <span>夏昕妍 · Xinyan Xia</span>
+    </a>
+    <nav class="nav">
+      <a href="#bees">我与蜜蜂 · Bees</a>
+      <a href="#action">义工与科技 · Action</a>
+      <a href="#tek">节气智慧 · Solar Terms</a>
+      <a href="#more">更多的我 · More</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <!-- 首屏人物照：昕妍在蜂场（本人实拍）。换照片只需替换下面这一张 img 的 src -->
+  <div class="hero-photo" id="heroPhoto">
+    <img src="media/hero-apiary.jpg" alt="夏昕妍在秦岭蜂场" loading="eager">
+  </div>
+  <div class="hero-tint"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-mist"></div>
+
+  <div class="hero-in">
+    <div>
+      <p class="hero-hi">Hello,<span class="zh">欢迎来到我的主页。</span></p>
+      <h1>夏昕妍<span class="en">Xinyan Xia</span></h1>
+      <p class="hero-sub">我是西安人。爱唱歌，写过一出戏，大部分周末不是在秦岭山里，就是在去山里的路上。
+        <span class="en">I'm from Xi'an. I sing, I wrote a play, and most weekends I'm either up in the Qinling Mountains or on my way there.</span></p>
+      <p class="hero-sub">这里记的是我这几年做过的事，和我真正在意的东西。
+        <span class="en">This page is about what I've been doing these past few years, and what I actually care about.</span></p>
+      <div class="kw" aria-label="关键词 Keywords">
+        <span>环境主义者 · Environmentalist</span><span>戏剧 · Drama</span><span>流行乐 · Singing</span>
+        <span>科技推广 · Tech outreach</span><span>社区保护 · Community conservation</span>
+      </div>
+    </div>
+    <div aria-hidden="true"></div>
+  </div>
+  <span class="hero-cap">秦岭蜂场 · Qinling apiary</span>
+</section>
+
+
+
+<!-- ═══════════ SNAPSHOTS ═══════════ -->
+<div class="wrap snaps">
+  <div class="snaps-head reveal">
+    <span class="k">镜头里的我 · On camera</span>
+    <h2>先看几段真实的记录<span class="en">A few real moments, before anything else</span></h2>
+  </div>
+  <div class="snaps-grid reveal">
+    <!-- 唱歌 -->
+    <div class="snap">
+      <div class="main ph ph-stage">
+        <video src="media/singing-festival.mp4" poster="media/singing-festival-frame.jpg" controls playsinline preload="metadata"></video>
+        <span class="tag">Singing · 唱歌</span>
+      </div>
+      <div class="thumbs">
+        <div class="ph ph-stage"><img src="media/singing-stage-wide.jpg" alt="" loading="lazy"></div>
+        <div class="ph ph-stage"><img src="media/singing-stage-close.jpg" alt="" loading="lazy"></div>
+      </div>
+      <div class="txt"><b>草坪音乐节，校园的舞台</b>
+        <p>三年都去试了音，三年都站上去了。我家人都爱唱，我是跟着唱大的。<span class="en">Three years of auditions, three years on that stage. Everyone in my family sings; I grew up singing along.</span></p></div>
+    </div>
+    <!-- 环保义工 -->
+    <div class="snap">
+      <div class="main ph ph-forest">
+        <img src="media/ngo-cleanup-group.jpg" alt="自然之友西安志愿者队净滩合影" loading="lazy" style="object-position:50% 60%">
+        <span class="tag">Volunteer · 环保义工</span>
+      </div>
+      <div class="thumbs">
+        <div class="ph ph-forest"><img src="media/ngo-sorting.jpg" alt="" loading="lazy"></div>
+        <div class="ph ph-forest"><img src="media/ngo-trail-pickup.jpg" alt="" loading="lazy" style="object-position:50% 55%"></div>
+      </div>
+      <div class="txt"><b>自然之友西安志愿者队</b>
+        <p>从初中第一次跟队去河滩捡垃圾，到现在一直没停。<span class="en">My first outing was a riverbank clean-up in middle school. I never really stopped.</span></p></div>
+    </div>
+    <!-- 科技实验 -->
+    <div class="snap">
+      <div class="main ph ph-sat">
+        <video src="media/lab-sandbox.mp4" poster="media/lab-sandbox-frame.jpg" controls playsinline preload="metadata"></video>
+        <span class="tag">Lab · 科技实验</span>
+      </div>
+      <div class="thumbs">
+        <div class="ph ph-sat"><img src="media/lab-wall.jpg" alt="" loading="lazy" style="object-position:50% 35%"></div>
+        <div class="ph ph-sat"><img src="media/lab-rig-frame.jpg" alt="" loading="lazy" style="object-position:50% 30%"></div>
+      </div>
+      <div class="txt"><b>西电环境监测实验室</b>
+        <p>在实验室学着用卫星影像看山，看那些人走不到的地方。<span class="en">Learning to read the mountain from satellite images, in the places no one can hike to.</span></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ 01 · BEES ═══════════ -->
+<section class="chapter" id="bees">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <div class="ch-num">01</div>
+      <div>
+        <div class="ch-kicker">Chapter One · 我与蜜蜂的故事</div>
+        <h2 class="ch-title">我与蜜蜂的故事<span class="en">Me and the Bees</span></h2>
+        <div class="ch-lead story-lead">
+          <p>我在西安长大。这座城做过十三个朝代的都城，南边就是秦岭。小时候常听长辈说，西安是块风水宝地，台风、洪水这些灾害走到秦岭跟前就停了，是山在替我们挡着。那时候我不太懂，只知道周末爸妈常带我进山走走，累了就在溪边坐一会儿。
+            <span class="en">I grew up in Xi'an. Thirteen dynasties made it their capital, and the Qinling Mountains sit right to the south. When I was little, the grown-ups liked to say Xi'an was a blessed place: typhoons and floods stop at the Qinling, the mountain takes the hit for us. I didn't think much about it then. I just knew my parents took me hiking most weekends, and when I got tired we'd sit by a creek.</span></p>
+          <p>后来我长大了，还是常进山，但看到的东西不一样了。山脚下的农家乐越开越多，步道越修越宽，溪边的垃圾也越来越多。有一次在一户蜂农家门口，他指着几个空蜂箱跟我说："蜂一年比一年少。"我站在那儿，第一次觉得这座一直在保护我们的山，可能也需要有人保护它。
+            <span class="en">I still go up a lot, but I see different things now. More farm-stay restaurants at the foot of the mountain, wider trails, more trash by the creeks. One day a beekeeper pointed at a few empty hives outside his house and said, "Fewer bees every year." Standing there, it hit me for the first time that the mountain that had always protected us might need someone to protect it back.</span></p>
+          <p>蜜蜂这件事，就是从那天开始的。左边是我进山做的事，右边是我把这些事讲出去的方式。
+            <span class="en">That's where the bees started. On the left, what I did in the mountains. On the right, how I tell it.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story reveal">
+      <!-- FIELD -->
+      <div class="col col-field">
+        <div class="col-label"><i></i>Field · 田野</div>
+        <h3>秦岭中华蜂项目</h3>
+        <p class="h3en">Qinling Honeybee Project · Pesticides, tourists, and mountain apiaries</p>
+        <p class="lead">我和四个同学一起做的。三次进山，先听蜂农讲，再把听来的事一样样量出来。细节都在小窗里，先看视频。
+          <span class="en">Five of us did this. Three trips up the mountain: listen to the beekeepers first, then measure what they told us. Details are inside the windows; watch the videos first.</span></p>
+
+        <div class="col-video">
+          <!-- ▼ 换视频：把文件放进 media/ 并改 src ▼ -->
+          <video src="media/field-beekeeper.mp4" poster="media/field-beekeeper-frame.jpg" controls playsinline preload="metadata"></video>
+          <span class="vtag">蜂农访谈 · Beekeeper interview</span>
+        </div>
+
+        <div class="tiles">
+          <button class="tile" data-modal="m-field-video">
+            <div class="media ph ph-honey">
+              <img src="media/field-hive-frame.jpg" alt="秦岭蜂场的中华蜂蜂箱" loading="lazy">
+              <div class="veil"></div>
+              <span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>视频 + 记录</span>
+              <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="tile-body"><b>三次进山：从听说到量出来</b><small>Three trips: from hearsay to numbers</small></div>
+          </button>
+          <button class="tile" data-modal="m-field-dance">
+            <div class="media ph ph-forest">
+              <img src="media/field-soil-probe.jpg" alt="田野测量" loading="lazy" style="object-position:50% 40%">
+              <div class="veil"></div>
+              <span class="badge">📍 方法 Method</span>
+              <span class="tile-open"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+            </div>
+            <div class="tile-body"><b>摇摆舞怎么变成一张地图</b><small>How a waggle dance becomes a map</small></div>
+          </button>
+        </div>
+
+        <div class="col-video" style="margin:16px 0 0">
+          <video src="media/field-orchard-talk.mp4" poster="media/field-orchard-talk-frame.jpg" controls playsinline preload="metadata"></video>
+          <span class="vtag">果园里 · In the orchard</span>
+        </div>
+      </div>
+
+      <!-- SPINE -->
+      <div class="spine" aria-hidden="true">
+        <div class="spine-step cool">看见</div>
+        <div class="spine-arrow">field → stage</div>
+        <div class="spine-step">追问</div>
+        <div class="spine-arrow">data → story</div>
+        <div class="spine-step hot">讲出来</div>
+      </div>
+
+      <!-- STAGE -->
+      <div class="col col-stage">
+        <div class="col-label"><i></i>Stage · 舞台</div>
+        <h3>《留一半给山》：原创生态戏剧</h3>
+        <p class="h3en">"Leave Half to the Mountain" · An original one-act eco-drama</p>
+        <p class="lead">蜂农跟我说的那些话，我觉得只写进报告里太可惜了，就写成了一出戏。一个养蜂世家三代人，在大旱之年为了老规矩、蜂箱数据和一张两千斤的订单吵成一团。独幕，四个人物，大约十五分钟。
+          <span class="en">What the beekeepers told me felt like too much to leave in a report, so I turned it into a play. Three generations of one family, in a drought year, arguing over an old rule, hive data, and a 2,000-jin order. One act, four characters, about fifteen minutes.</span></p>
+
+        <div class="tiles one">
+          <button class="tile" data-modal="m-play">
+            <div class="media ph ph-stage">
+              <!-- 戏剧封面图：想换成剧照时，在这里加一行 <img src="media/play-cover.jpg" alt=""> -->
+              <div class="veil"></div>
+              <span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>戏剧 Play</span>
+              <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+            <div class="tile-body"><b>完整视频 · 人物表 · 完整剧本</b><small>The film, the cast, and the full script</small></div>
+          </button>
+        </div>
+
+        <div class="arts">
+          <button class="art" data-modal="m-art-half"><span class="n">i</span><span><b>为什么取蜜只拿一半</b><small>Why beekeepers take only half the honey</small></span><span class="arr">↗</span></button>
+          <button class="art" data-modal="m-art-qinling"><span class="n">ii</span><span><b>一只中华蜂，对秦岭意味着什么</b><small>What one small bee does for a whole mountain range</small></span><span class="arr">↗</span></button>
+          <button class="art" data-modal="m-art-human"><span class="n">iii</span><span><b>喷药、步道和游客：人怎么改变了蜂群</b><small>Sprays, trails, tourists: how people change a hive</small></span><span class="arr">↗</span></button>
+        </div>
+
+        <blockquote class="quote">"蜂箱是你的，蜜是山的。拿一半，明年山还给你。"
+          <span class="en">"The box is yours. The honey belongs to the mountain. Take half, and the mountain pays you back next year."</span>
+          <cite>一位养蜂人在访谈里说的，后来成了这出戏的名字 · A beekeeper said this in an interview. It became the title.</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 02 · ACTION ═══════════ -->
+<section class="chapter alt" id="action">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <div class="ch-num">02</div>
+      <div>
+        <div class="ch-kicker">Chapter Two · 保护，两种方式</div>
+        <h2 class="ch-title">保护秦岭：弯下腰捡，也抬起头看<span class="en">Protecting the Qinling: Bend Down, Look Up</span></h2>
+        <p class="ch-lead">一种是最笨的办法：戴上手套，把河滩上的瓶子一个一个捡起来。另一种是最远的办法：坐在实验室里，从七百公里外的卫星影像上找山哪里受了伤。两件事我都在做。它们看的是同一座山。
+          <span class="en">One way is the simplest: put on gloves and pick the bottles off the riverbank one by one. The other is the farthest: sit in a lab and look for where the mountain is hurt, from a satellite 700 km up. I do both. It's the same mountain.</span></p>
+      </div>
+    </div>
+
+    <div class="duo reveal">
+      <!-- NGO -->
+      <div class="panel">
+        <div class="panel-hero ph ph-wall">
+          <img src="media/ngo-cleanup-group.jpg" alt="自然之友西安志愿者队净滩活动合影" loading="lazy" style="object-position:50% 60%">
+          <div class="veil"></div><span class="lab-tag">Xi'an · Friends of Nature volunteer team</span>
+        </div>
+        <div class="panel-body">
+          <div class="panel-kicker"><i></i>Volunteer · 自然之友西安志愿者队</div>
+          <h3>跟着自然之友，一跟就是好几年</h3>
+          <p class="h3en">Friends of Nature volunteer, since middle school · China's first environmental NGO (est. 1994)</p>
+          <p>初中第一次跟队去河滩捡垃圾，之后就没断过：观鸟、净滩、给小朋友讲"长安八水"，还有我自己做的碳交易卡牌。都是小事，但做完回头看，那一截河滩是真的干净了。
+            <span class="en">My first outing was a riverbank clean-up in middle school, and I never really stopped: birdwatching, clean-ups, teaching kids the eight rivers of Xi'an, a carbon-trading card game I made myself. Small things. But when you look back, that stretch of riverbank really is cleaner.</span></p>
+          <div class="acts">
+            <button class="act" data-modal="m-ngo-game">
+              <span class="ico"><svg viewBox="0 0 32 32" fill="none"><rect x="5" y="8" width="14" height="19" rx="2" fill="#2F4A3A"/><rect x="12" y="5" width="14" height="19" rx="2" fill="#D8A23F"/><path d="M16 11 l3 4 l-3 4 l-3 -4 z" fill="#17251C"/></svg></span>
+              <span><b><span class="num">120+</span>人玩过的碳交易卡牌</b><small>A carbon-trading card game I designed and ran at NGO events</small></span>
+            </button>
+            <button class="act" data-modal="m-ngo-bird">
+              <span class="ico"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="2" fill="#D5DCC6"/><g fill="#2F4A3A"><circle cx="10" cy="10" r="1.6"/><circle cx="16" cy="10" r="1.6"/><circle cx="22" cy="10" r="1.6"/><circle cx="10" cy="16" r="1.6"/><circle cx="16" cy="16" r="1.6"/><circle cx="22" cy="16" r="1.6"/><circle cx="10" cy="22" r="1.6"/><circle cx="16" cy="22" r="1.6"/><circle cx="22" cy="22" r="1.6"/></g></svg></span>
+              <span><b><span class="num">40</span>块玻璃贴上防鸟撞点阵</b><small>Bird-strike decals on 40 panes, 5 cm grid</small></span>
+            </button>
+            <button class="act" data-modal="m-ngo-moss">
+              <span class="ico"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="14" width="24" height="14" fill="#8E9184"/><rect x="4" y="10" width="24" height="4" fill="#6B6657"/><g fill="#7A9468"><circle cx="9" cy="16" r="2.5"/><circle cx="15" cy="20" r="3"/><circle cx="23" cy="17" r="2.2"/><circle cx="20" cy="24" r="2"/></g></svg></span>
+              <span><b>记录西安城墙上的苔藓</b><small>Moss survey on the Ming city wall</small></span>
+            </button>
+          </div>
+          <div class="gallery" style="grid-template-columns:1fr 1fr 1fr;margin:18px 0 0">
+            <figure class="ph ph-forest"><img src="media/ngo-rivers-talk.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption>"长安八水"自然课堂 · Rivers of Xi'an, for kids</figcaption></figure>
+            <figure class="ph ph-forest"><img src="media/ngo-sorting.jpg" alt="" loading="lazy"><figcaption>河滩与林地捡拾分类 · Litter pick-up &amp; sorting</figcaption></figure>
+            <figure class="ph ph-forest"><img src="media/volunteer-elderly.jpg" alt="" loading="lazy" style="object-position:30% 40%"><figcaption>重阳节社区义工 · Community service day</figcaption></figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAB -->
+      <div class="panel">
+        <div class="panel-hero ph ph-sat">
+          <!-- 实拍：昕妍在西电秦岭保护数字化实验室 -->
+          <img src="media/lab-wall.jpg" alt="夏昕妍在西安电子科技大学秦岭生态监测实验室" loading="lazy" style="object-position:50% 35%">
+          <div class="veil"></div><span class="lab-tag">Xidian University · Environmental Monitoring Lab</span>
+        </div>
+        <div class="panel-body">
+          <div class="panel-kicker"><i></i>Lab · 西安电子科技大学环境监测实验室</div>
+          <h3>给走不到的山装一双眼睛</h3>
+          <p class="h3en">Environmental Monitoring Lab, Xidian University · Remote Sensing for Protected Areas · Student Research Assistant</p>
+          <p>秦岭很多地方没有路，护林员一年也去不了一次。我在实验室做的事说起来很简单：把不同时间的卫星影像放在一起比，哪里的绿突然没了，就标出来，交给巡护的人去看。
+            <span class="en">Much of the Qinling has no roads; rangers may not get there once a year. What I do in the lab sounds simple: put satellite images from different dates side by side, mark where the green suddenly disappears, and hand the list to the people who hike in to check.</span></p>
+          <div class="lab-stats">
+            <div class="find"><b>1,200<em> km²</em></b><span>监测区<span class="en">monitored area</span></span></div>
+            <div class="find"><b>37<em> 处</em></b><span>标记的滑坡与林地空缺<span class="en">landslides &amp; clearings flagged</span></span></div>
+            <div class="find"><b>2<em> 篇</em></b><span>在审论文<span class="en">papers in review</span></span></div>
+          </div>
+          <div class="tiles">
+            <button class="tile" data-modal="m-lab-method">
+              <div class="media ph ph-sat">
+                <img src="media/lab-sandbox-frame.jpg" alt="实验室地形沙盘" loading="lazy" style="object-position:50% 60%">
+                <div class="veil"></div>
+                <span class="badge">🛰️ 方法 Method</span>
+                <span class="tile-open"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+              </div>
+              <div class="tile-body"><b>变化检测是怎么做的</b><small>How change detection works</small></div>
+            </button>
+            <button class="tile" data-modal="m-lab-life">
+              <div class="media ph ph-sat">
+                <img src="media/lab-rig-frame.jpg" alt="" loading="lazy" style="object-position:50% 30%">
+                <div class="veil"></div>
+                <span class="badge">📷 记录 Notebook</span>
+                <span class="tile-open"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+              </div>
+              <div class="tile-body"><b>实验室日常与论文进度</b><small>Lab notebook &amp; papers</small></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 03 · SOLAR TERMS ═══════════ -->
+<section class="chapter" id="tek">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <div class="ch-num">03</div>
+      <div>
+        <div class="ch-kicker">Chapter Three · 往前走，也回头看</div>
+        <h2 class="ch-title">往前走的时候，别把老人的话丢了<span class="en">Looking Ahead, Without Losing What the Elders Know</span></h2>
+        <p class="ch-lead">卫星和传感器能告诉我今天的数，但告诉不了我"清明前后点瓜种豆"是怎么来的。这些话，爷爷奶奶那辈人说了一辈子，没人写下来。我想在它们消失之前记下来，再看看在变暖的秦岭，它们还准不准。
+          <span class="en">Satellites and sensors can give me today's numbers. They can't tell me where "plant melons and beans around Qingming" came from. The grandparents' generation has said these things all their lives, and nobody wrote them down. I wanted to record them before they're gone, and then check whether they still hold in a warming Qinling.</span></p>
+      </div>
+    </div>
+
+    <div class="tek reveal">
+      <div>
+        <div class="wheel-box" aria-hidden="true">
+          <div class="wheel">
+            <svg viewBox="-110 -110 220 220">
+              <circle r="100" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <circle r="78" fill="none" stroke="var(--moss-soft)" stroke-width="1" stroke-dasharray="2 3"/>
+              <circle r="56" fill="none" stroke="var(--line)" stroke-width="1"/>
+              <g id="spokes"></g>
+            </svg>
+          </div>
+          <div class="wheel-tag"><b>二十四节气</b><span>24 Solar Terms</span></div>
+        </div>
+        <div class="terms" id="terms"></div>
+        <p class="legend"><i></i>访谈里物候线索已经挪了 1–2 周的节气（12 个）；点任意一格看详情<span class="en">Highlighted: 12 terms whose signs have shifted 1–2 weeks. Click any term.</span></p>
+      </div>
+
+      <div class="club">
+        <div class="club-hero ph ph-mist">
+          <img src="media/field-survey-notes.jpg" alt="田野记录" loading="lazy" style="object-position:50% 35%">
+          <div class="veil"></div>
+        </div>
+        <div class="club-body">
+          <div class="panel-kicker"><i></i>Founder · 节气田野社</div>
+          <h3 style="font-family:var(--serif-sc);font-size:1.38rem;color:var(--ink);line-height:1.35">节气田野社：把老人的话放到气象数据旁边</h3>
+          <p class="h3en" style="font-family:var(--display);font-style:italic;color:var(--moss);margin:4px 0 14px">Jieqi Field Club · Documenting elders' unrecorded lore, then checking it against 30 years of climate data</p>
+          <p style="color:var(--ink-soft);font-size:.94rem">我和 14 个同学挨家走访了 20 户农民，把他们只在嘴上传的东西记下来：看天的老话、跟着节气来的农事提示——什么时候见第一只燕子、杏花哪天开、什么时候该起垄。一共 50 多条，再一条条对照本地 30 年的气象记录，有 12 条已经悄悄挪了一到两周。最后编成一本中英双语的小指南，放进了学校图书馆。
+            <span class="en" style="display:block;color:var(--ink-faint);font-size:.9rem;margin-top:6px">With 14 classmates I went door to door to 20 farming families and wrote down what they'd only ever passed on out loud: weather sayings, solar-term cues, when the first swallow shows up, when the apricots bloom, when to ridge the fields. Fifty-some in all. Then we checked each one against 30 years of local weather records; twelve have quietly shifted by one to two weeks. It all went into a bilingual guide that's now in the school library.</span></p>
+          <div class="club-stats">
+            <div class="find"><b>50<em>+</em></b><span>节气物候线索<span class="en">seasonal cues collected</span></span></div>
+            <div class="find"><b>12<em> 条</em></b><span>已提前或推迟 1–2 周<span class="en">shifted 1–2 weeks</span></span></div>
+            <div class="find"><b>40<em> 页</em></b><span>中英双语指南<span class="en">bilingual field guide</span></span></div>
+            <div class="find"><b>1<em> 本</em></b><span>放进学校图书馆的指南<span class="en">copy in the school library</span></span></div>
+          </div>
+          <div class="sub-list">
+            <button class="sub-item" data-modal="m-tek-what"><span class="n">i</span><span><b>什么是 TEK：写在节气里的气候档案</b><small>What "traditional ecological knowledge" means</small></span><span class="arr">↗</span></button>
+            <button class="sub-item" data-modal="m-tek-method"><span class="n">ii</span><span><b>我们怎么验证一句农谚</b><small>How we tested a farmer's saying</small></span><span class="arr">↗</span></button>
+            <button class="sub-item" data-modal="m-tek-shift"><span class="n">iii</span><span><b>挪了的 12 条：从惊蛰到霜降</b><small>The twelve that moved</small></span><span class="arr">↗</span></button>
+            <button class="sub-item" data-modal="m-tek-guide"><span class="n">iv</span><span><b>《节气物候田野指南》</b><small>The 40-page field guide</small></span><span class="arr">↗</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wisdom reveal">
+      <div class="ph ph-forest"><img src="media/ngo-rivers-map.jpg" alt="手绘长安八水图" loading="lazy" style="object-position:40% 50%"></div>
+      <div class="shade"></div>
+      <div class="w-in">
+        <blockquote>"你们那个卫星看得见山，看不见我这棵杏树哪天开花。我看了四十年，一年比一年早。"
+          <span class="en">"Your satellite can see the mountain. It can't see the day my apricot tree blooms. I've watched it forty years. It comes earlier every year."</span></blockquote>
+        <cite>秦岭北麓果农 · 节气田野社访谈（受访者信息待补）· Orchard farmer, north slope of the Qinling</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MORE ═══════════ -->
+<section class="chapter alt" id="more" style="padding-top:80px">
+  <div class="wrap">
+    <div class="ch-head reveal" style="margin-bottom:30px">
+      <div class="ch-num" style="font-size:3.2rem">+</div>
+      <div>
+        <div class="ch-kicker">Beyond the field · 更多的我</div>
+        <h2 class="ch-title" style="font-size:1.9rem">更多的我<span class="en">A few more things about me</span></h2>
+      </div>
+    </div>
+    <div class="more reveal">
+      <div class="m"><div class="k">Vocal · 草坪音乐节</div><b>连续三年通过试音，给 800 多个同学唱歌</b><p>我家人都爱唱，我从小跟着唱。后来把同样的歌带进了心音社。<span class="en">Three years in a row I made it through auditions and sang solo for 800+ classmates. Singing runs in my family.</span></p></div>
+      <div class="m"><div class="k">Peer support · 心音社</div><b>联合创办"心音"同伴支持社，办了 30 多场活动</b><p>合唱、画画、拼豆；教 14 个成员"只听，不劝"。期末周做一对一陪聊。<span class="en">Co-founded a peer-support club: singalongs, drawing, bead art, and 14 members trained to listen rather than advise.</span></p></div>
+      <div class="m"><div class="k">Journalism · 校园环境专栏</div><b>12 篇双语文章，有一篇让食堂加了小份餐</b><p>写鸟撞玻璃、流浪猫、树苗枯死和食堂浪费。文字有时真能改一张菜单。<span class="en">Twelve bilingual columns on campus environment. One got the cafeteria to add half portions.</span></p></div>
+      <div class="m"><div class="k">Work · 家教</div><b>教 4 个初中生英语和数学，工资买了 GPS 和蜂箱秤</b><p>自己出题，四个孩子期末都涨了分。田野的装备是这笔钱置办的。<span class="en">Tutored four middle schoolers. All four raised their grades. The pay bought my field gear.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="foot">
+  <div class="ph ph-forest"><img src="media/river-walk.jpg" alt="" loading="lazy" style="object-position:50% 45%"></div>
+  <div class="shade"></div>
+  <div class="wrap foot-in">
+    <p class="foot-q">取一半，留一半给山。<span class="en">Take half. Leave half to the mountain. A beekeeper's rule, and the one I try to live by.</span></p>
+    <div class="foot-meta"><span>夏昕妍 · Xinyan Xia</span><span>✉ email@example.com</span><span>西安 · Xi'an, China</span></div>
+    <p class="foot-note">本站照片与视频均为本人及同行伙伴实拍。</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════ MODALS ═══════════════════ -->
+
+<div class="modal" id="m-field-video" role="dialog" aria-modal="true" aria-label="三次进山">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">field / qinling-honeybee-project</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="win-video ph ph-forest">
+      <!-- ▼ 换视频：把文件放进 media/ 并改下面 src 即可 ▼ -->
+      <video src="media/field-hive.mp4" poster="media/field-hive-frame.jpg" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;background:#000"></video>
+      <div class="vlabel"><span>Field footage · 蜂场实拍</span><h3>三次进山：从听说到量出来<span class="en">Three trips: from hearsay to numbers</span></h3></div>
+    </div>
+    <div class="article">
+      <div class="meta"><span><b>地点</b> 秦岭北麓蜂场、果园</span><span><b>团队</b> 5 人</span><span><b>形式</b> 口述访谈 · 蜂场实拍 · 测量</span></div>
+      <div class="inshort"><b>In short</b>Five of us studied small, traditional apiaries of the native Asian honeybee (<em>Apis cerana</em>) on the north slope of the Qinling. The bee is tough and needs almost no care, but it's getting squeezed from both sides: orchards spraying below, tourists above. Three trips: listen, measure, then go back and tell the farms what we found.</div>
+      <p class="lede">研究对象是秦岭北麓的中华蜜蜂土法蜂场。这种蜂耐冷、不挑蜜源、基本不用人管，可山下果园在喷药，山上游客越来越多，两头都在挤它。</p>
+
+      <h4>三次进山 <span class="en">Three trips</span></h4>
+      <div class="trips">
+        <div class="trip"><div class="d">TRIP 01<br>看见</div><div><b>第一次进山，蜂农都说"蜂少了"</b><small>录了 18 位养蜂人的口述。每个人都觉得蜂在减少，但说不清原因。<span class="en">Trip 1: Every beekeeper said the bees were disappearing. Nobody agreed on why.</span></small></div></div>
+        <div class="trip"><div class="d">TRIP 02<br>量化</div><div><b>解码 80 多支摇摆舞，画出蜂群的觅食地图</b><small>把舞蹈角度和时长换算成方向和距离，叠在地图上，再量蜂场到喷药点和步道的距离。<span class="en">Trip 2: I decoded 80+ waggle dances into a forage map, then measured each apiary's distance to sprayed orchards and trails.</span></small></div></div>
+        <div class="trip"><div class="d">TRIP 03<br>行动</div><div><b>两家果园改成黄昏喷药</b><small>蜂日落归巢，黄昏喷药避开采集高峰。这是整个项目里我最高兴的一行。<span class="en">Trip 3: Two orchards agreed to spray at dusk, after the bees are home. My favorite line in the whole project.</span></small></div></div>
+      </div>
+
+      <div class="findings">
+        <div class="find"><b>+40<em>%</em></b><span>离喷药果园 1 km 内的蜂场，蜂群损失更高<span class="en">higher hive loss within 1 km of sprays</span></span></div>
+        <div class="find"><b>+25<em>%</em></b><span>靠近旅游步道的蜂场，损失更高<span class="en">higher loss near tourist trails</span></span></div>
+        <div class="find"><b>18<em> 位</em></b><span>录像访谈的养蜂人<span class="en">beekeepers filmed</span></span></div>
+        <div class="find"><b>2<em> 家</em></b><span>改为黄昏喷药的果园<span class="en">farms now spraying at dusk</span></span></div>
+      </div>
+
+      <h4>更多田野片段 <span class="en">More from the field</span></h4>
+      <div class="gallery">
+        <figure class="ph ph-forest" style="aspect-ratio:16/9"><video src="media/field-orchard-talk.mp4" poster="media/field-orchard-talk-frame.jpg" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:#000"></video><figcaption>果园里测土温 · Soil temperature in the orchard</figcaption></figure>
+        <figure class="ph ph-forest" style="aspect-ratio:16/9"><video src="media/field-orchard-walk.mp4" poster="media/field-orchard-walk-frame.jpg" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:#000"></video><figcaption>跟果农走一圈 · Walking the rows with the farmer</figcaption></figure>
+      </div>
+
+      <h4>为什么是中华蜂 <span class="en">Why this bee</span></h4>
+      <p>秦岭蜂农养的多是中华蜜蜂，本土蜂种。跟引进的意大利蜂比，它更耐冷、能用零散的山地蜜源、成本低，几乎不用喂糖，所以山里的老人一桶蜂能养几十年。也正因为它半野生，对环境变化特别敏感：蜜源断了、药味重了，它会直接弃巢飞走。</p>
+      <h4>访谈里反复出现的三句话 <span class="en">Three things everyone said</span></h4>
+      <ul>
+        <li>"打药那几天，蜂回来得少。" 指向山下果园的喷药时段。</li>
+        <li>"路修通以后人多了，蜂反而少了。" 指向旅游步道和人流。</li>
+        <li>"蜜不能取干净，要留一半。" 几乎每位老人都主动提到的规矩。</li>
+      </ul>
+      <blockquote>这三句话，后来分别变成了我们的两个研究变量，和一出戏的名字。<span class="en">Those three lines became our two research variables and the title of a play.</span></blockquote>
+      <h4>从听说到量化 <span class="en">From hearsay to numbers</span></h4>
+      <p>访谈给了方向，但不能当结论。第二趟进山，我们开始记每个蜂场到最近喷药果园、到旅游步道的直线距离，再结合蜂农报的蜂群损失做对比。结果见"摇摆舞怎么变成一张地图"。</p>
+      <div class="note">ⓘ 数字与样本量为项目记录，后续可按定稿补充。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-field-dance" role="dialog" aria-modal="true" aria-label="摇摆舞方法">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">field / methods / waggle-dance-mapping.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>类型</b> 方法笔记 Method note</span><span><b>样本</b> 80+ dances</span><span><b>工具</b> 手机慢动作 · 量角器 · GPS</span></div>
+      <h2>摇摆舞怎么变成一张地图<span class="en">How a waggle dance becomes a map</span></h2>
+      <div class="inshort"><b>In short</b>A returning forager dances a figure-eight. The angle of the run tells the direction relative to the sun; the duration tells the distance. I filmed 80+ dances in slow motion, converted each to a point on a map, and compared each apiary's forage area against sprayed orchards and tourist trails.</div>
+      <p class="lede">蜜蜂找到好蜜源后，会回巢跳一段"8 字舞"告诉同伴去哪儿。读懂这支舞，就能不跟着蜂飞，也知道它们在吃哪片山。</p>
+      <h4>一支舞里的两个数 <span class="en">Two numbers in one dance</span></h4>
+      <ul>
+        <li><strong>方向：</strong>摇摆段相对于巢脾垂直方向的夹角，就是蜜源相对于太阳的方位角。记下时间、查当时太阳方位，就能换算成真实方向。</li>
+        <li><strong>距离：</strong>摇摆段越长，蜜源越远。我们用常见的经验换算（1 秒约 1 公里量级）做粗估，再实地核查校正。</li>
+      </ul>
+      <h4>流程 <span class="en">Workflow</span></h4>
+      <ul>
+        <li>在观察蜂箱旁用手机慢动作拍舞蹈，每支舞至少取 4 次摇摆段求平均。</li>
+        <li>把每支舞换算成一个"觅食点"画在地图上，80 多个点连成每个蜂场的觅食范围。</li>
+        <li>同一张图上标出果园喷药点和旅游步道，量每个蜂场到它们的最近距离。</li>
+        <li>按蜂农报告的蜂群损失分组比较。</li>
+      </ul>
+      <div class="tscroll">
+      <table class="data-table">
+        <thead><tr><th>分组 Group</th><th>蜂场数 n</th><th>相对损失 Loss</th><th>备注 Notes</th></tr></thead>
+        <tbody>
+          <tr><td>距喷药果园 &lt; 1 km · within 1 km of sprays</td><td>—</td><td><b>+40%</b></td><td>觅食点集中落在果园内</td></tr>
+          <tr><td>靠近旅游步道 · near trails</td><td>—</td><td><b>+25%</b></td><td>人流、噪音、游客丢的甜食引来胡蜂</td></tr>
+          <tr><td>对照组 · control</td><td>—</td><td>基线 baseline</td><td>多为海拔较高的林缘蜂场</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">ⓘ 蜂场数一列留给昕妍填实际样本量。</div>
+      <h4>为什么农药会让蜂"不跳舞" <span class="en">Why pesticides quiet the dance</span></h4>
+      <p>这不只是我们的猜测。实验发现，蜜蜂吃到田间浓度的新烟碱类农药后，摇摆舞次数明显下降，甚至只剩几分之一，而且变得只肯采很甜的花蜜，带回蜂群的食物大幅减少（UC San Diego，Eiri &amp; Nieh，2012）；另一项针对噻虫胺的田间实验也看到摇摆段次数和觅食范围显著缩小（Tison 等，2020）。农药不一定直接毒死蜂，它先让蜂不会"说话"。</p>
+      <h4>最后一步：讲回去 <span class="en">Telling the farms</span></h4>
+      <p>我们把地图打印出来拿给两家果园看：你的果园正好是蜂的主要采集区。黄昏喷药，蜂已经归巢，果园效果也不损失。两家都同意了。</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-play" role="dialog" aria-modal="true" aria-label="留一半给山">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">stage / leave-half-to-the-mountain</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="win-video ph ph-stage">
+      <!-- ▼ 戏剧成片：把视频文件放进 media/ 文件夹，命名为 play.mp4，再把下面这一行的注释去掉即可 ▼
+      <video src="media/play.mp4" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;background:#000"></video>
+      -->
+      <div class="veil"></div>
+      <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <div class="vlabel"><span>Original play · 原创戏剧</span><h3>《留一半给山》<span class="en">Leave Half to the Mountain</span></h3></div>
+    </div>
+    <div class="article">
+      <div class="meta"><span><b>类型</b> 原创生态戏剧 · 独幕 · 约 15 分钟</span><span><b>身份</b> 编剧</span><span><b>人物</b> 4 人</span></div>
+      <div class="inshort"><b>In short</b>One beekeeping family in the Qinling, three generations. Grandma keeps the old rule of taking only half the honey. Dad, behind on a loan, wants to turn the apiary into a business. Eighteen-year-old Xiaoman brings in sensors, data, and a livestream. Then a drought year, a buyer with a 2,000-jin order, and one question: this year's sales, or next year's bees?</div>
+      <p class="lede">一个秦岭养蜂世家，三代人守着同一片山林，用完全不同的方式养蜂。大旱之年，收购商带着两千斤的订单上门，提出把蜜取净、冬天喂糖浆。奶奶守规矩，父亲要还贷，小满拿出越冬存活率和一场直播，让所有人看见另一种可能。</p>
+
+      <h4>人物 <span class="en">Cast</span></h4>
+      <div class="cast">
+        <div><b>章奶奶 · Grandma Zhang</b><small>75 岁，蜂一代。守老式木桶养蜂，把"取半留半"看得比利益重。<span class="en" style="display:block;margin-top:4px">75. First generation. Keeps bees in old wooden hives and holds the "take half" rule above profit.</span></small></div>
+        <div><b>章建军 · Zhang Jianjun</b><small>48 岁，蜂二代。务实焦虑，被贷款和生活压力困住，在规矩和生计之间左右为难。<span class="en" style="display:block;margin-top:4px">48. Second generation. Practical and anxious, squeezed between a loan and his mother's rule.</span></small></div>
+        <div><b>章小满 · Zhang Xiaoman</b><small>18 岁，蜂三代。高三学生，热爱环境科学，相信经验加数据。祖孙三代的沟通者。<span class="en" style="display:block;margin-top:4px">18. Third generation. A high-school senior who loves environmental science and believes in experience plus data. The go-between.</span></small></div>
+        <div><b>钱经理 · Manager Qian</b><small>40 岁，电商蜂蜜收购商。精明务实，不刻意作恶，看重流量和销量，但也能被更好的模式打动。<span class="en" style="display:block;margin-top:4px">40. An e-commerce honey buyer. Shrewd, not evil; cares about traffic and volume, but can be won over by a better model.</span></small></div>
+      </div>
+
+      <h4>核心立意 <span class="en">What it's about</span></h4>
+      <ul>
+        <li><strong>人与自然：</strong>取之有度，予之有尺。留给蜂的一半，也是留给山、留给未来的希望。<span class="en" style="display:block;color:var(--ink-faint)">People and nature: take with limits. The half you leave the bees is also the half you leave the mountain, and the future.</span></li>
+        <li><strong>传统与科技：</strong>科技不取代老手艺，而是让祖辈的智慧被验证、被看见、被传承。<span class="en" style="display:block;color:var(--ink-faint)">Tradition and technology: tech doesn't replace the old craft. It lets the old wisdom be tested, seen, and passed on.</span></li>
+        <li><strong>坚守与初心：</strong>市场可以改变卖法，但不能改变底线。真正长久的生计，是克制之后的收获。<span class="en" style="display:block;color:var(--ink-faint)">Holding the line: the market can change how you sell, not where you stop. A living that lasts comes after restraint.</span></li>
+      </ul>
+
+      <h4>舞台与音效 <span class="en">Stage &amp; sound</span></h4>
+      <p>舞台并排摆放两个蜂箱：左侧是老式黑亮木桶巢，右侧是带太阳能板和指示灯的白色智能蜂箱，背景是简单的远山剪影。全程以蜂鸣声为背景，平和时轻柔，紧张时尖锐细碎，丰盈时如潮水。智能蜂箱的提示音"叮"要清晰、突兀。
+        <span class="en" style="display:block;color:var(--ink-soft);margin-top:6px">Two hives side by side: an old, dark wooden hive on the left, a white smart hive with a solar panel and indicator lights on the right, mountains in silhouette behind. Bee hum runs under the whole play: soft when things are calm, sharp and splintered under tension, swelling like a tide at the end. The smart hive's "ding" should cut through.</span></p>
+
+      <div class="screenplay">
+        <p class="ft">完整剧本 · Full script</p>
+        <p class="sp-action" style="font-size:.8rem;color:#A7B5A0">英文为翻译版，部分本地用词无法精准表达，仅供参考。<br>English is a translation for reference only; some local expressions don't carry over exactly.</p>
+
+        <p class="sp-scene">清晨 · 秦岭蜂场 · Morning, the apiary in the Qinling</p>
+        <p class="sp-action">章奶奶和小满上场，小满拿出手机对着智能蜂箱扫码查看数据。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Grandma and Xiaoman enter. Xiaoman scans the smart hive with her phone and checks the readings.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">奶奶！七号蜂箱温度超标了。天气太干太热了。</p>
+        <p class="sp-line en">Grandma! Hive seven is running hot. It's too dry and too hot out.</p>
+
+        <p class="sp-char">章奶奶 GRANDMA</p>
+        <p class="sp-line">蜂自己会说话，我听得出来。</p>
+        <p class="sp-line en">The bees talk. I can hear it.</p>
+
+        <p class="sp-char">小满 XIAOMAN（直起身，笑着 · straightening up, smiling）</p>
+        <p class="sp-line">奶奶，普通人要想达到您这个境界，那得攒一辈子经验，可我的设备，能把养蜂的技术门槛给降下来。</p>
+        <p class="sp-line en">Grandma, it takes a whole lifetime to get an ear like yours. My gear just lowers the bar so other people can start.</p>
+
+        <p class="sp-action">章建军提着割蜜刀、拎着空木桶快步上场，眉头紧锁，手机贴在耳边。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Jianjun hurries in with a honey knife and an empty wooden bucket, brow knotted, phone pressed to his ear.</span></p>
+
+        <p class="sp-char">章建军 JIANJUN（压低声音 · low voice）</p>
+        <p class="sp-line">我知道，我知道……卖了蜜，款子到了一定还……喂？喂！</p>
+        <p class="sp-line en">I know, I know... once the honey sells, the money comes in, I'll pay... Hello? Hello!</p>
+
+        <p class="sp-action">章建军放下手机，脸色难看。章奶奶和小满看着他。<span class="en" style="display:block;font-style:italic;color:#8E9C88">He lowers the phone, face dark. Grandma and Xiaoman watch him.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">爸，又催债了？我查过气象数据，今年春旱严重，整片山区花期提前了八到十二天，花期缩短，蜜量肯定大打折扣。</p>
+        <p class="sp-line en">Dad, the bank again? I checked the weather data. The spring drought was bad this year. Bloom came eight to twelve days early across the whole range and didn't last. The honey's going to be way down.</p>
+
+        <p class="sp-char">章建军 JIANJUN（烦躁 · irritated）</p>
+        <p class="sp-line">数据再多也变不出蜂蜜。娘，要不……</p>
+        <p class="sp-line en">All the data in the world won't make honey. Ma, what if we...</p>
+
+        <p class="sp-action">舞台短暂安静，轻柔蜂鸣声隐隐传来。<span class="en" style="display:block;font-style:italic;color:#8E9C88">A short silence. A soft hum of bees underneath.</span></p>
+
+        <p class="sp-char">章奶奶 GRANDMA</p>
+        <p class="sp-line">蜂脾没有完全封盖，一口蜜都不许多取。这是规矩。</p>
+        <p class="sp-line en">The comb isn't fully capped. Not one extra mouthful comes out. That's the rule.</p>
+
+        <p class="sp-char">章建军 JIANJUN（压着焦虑 · holding down his panic）</p>
+        <p class="sp-line">娘，智能蜂箱贷款下个月要还，小满明年上大学，家里处处用钱，拖不起啊！</p>
+        <p class="sp-line en">Ma, the loan on the smart hives is due next month. Xiaoman starts college next year. Everything costs money. We can't wait this out!</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">爸，奶奶说的对，我查过数据，如果今年把蜜取净，蜂群越冬死亡率会翻倍。</p>
+        <p class="sp-line en">Dad, Grandma's right. I looked it up. If we strip the hives this year, winter losses double.</p>
+
+        <p class="sp-char">章建军 JIANJUN（猛地转头 · whipping around）</p>
+        <p class="sp-line">撑过今年再说！</p>
+        <p class="sp-line en">We get through this year first!</p>
+
+        <p class="sp-action">章奶奶慢慢直起身，正想说话，钱经理拎着公文包上场，西装搭配运动鞋，边走边举手机拍摄，满脸精明笑意。章奶奶见了他，不想上前搭话，拿起蜂箱上的刮蜜刀擦拭起来。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Grandma slowly straightens and is about to speak when Manager Qian enters with a briefcase, suit jacket over sneakers, filming on his phone as he walks, a sharp smile on his face. Grandma sees him, wants nothing to do with him, picks up the scraper from the hive and starts wiping it.</span></p>
+
+        <p class="sp-char">钱经理 QIAN（对着手机镜头 · to his phone camera）</p>
+        <p class="sp-line">家人们看过来！这就是秦岭深山的三代养蜂人家！左边老木桶，故事感拉满！右边智能蜂箱，科技感也拉满！</p>
+        <p class="sp-line en">Everybody, look at this! Three generations of beekeepers, deep in the Qinling! Old wooden hive on the left, that's the story! Smart hive on the right, that's the tech! Both maxed out!</p>
+
+        <p class="sp-action">钱经理收起手机，转向三人。<span class="en" style="display:block;font-style:italic;color:#8E9C88">He pockets the phone and turns to the three of them.</span></p>
+
+        <p class="sp-char">钱经理 QIAN（从包里拿出合同，扬了扬 · pulling a contract from the bag and waving it）</p>
+        <p class="sp-line">章师傅，我们平台山货节重点推你们家的土蜂蜜！两千斤大单，你要同意，咱当场就签！</p>
+        <p class="sp-line en">Mr. Zhang, our platform's Mountain Harvest sale is going to feature your honey! Two thousand jin, one big order. Say yes and we sign right here.</p>
+
+        <p class="sp-char">章建军 JIANJUN（眼睛一亮，又立刻为难 · lighting up, then faltering）</p>
+        <p class="sp-line">这可解了燃眉之急了。可今年大旱减产……</p>
+        <p class="sp-line en">That would get us out of the fire. But with the drought this year, the yield...</p>
+
+        <p class="sp-char">钱经理 QIAN（轻松一笑 · with an easy laugh）</p>
+        <p class="sp-line">把所有蜂蜜全部取完，冬天喂糖水代替花蜜，蜜蜂照样活。章师傅，别告诉我你不懂这个方法啊！</p>
+        <p class="sp-line en">Take all the honey. Feed them sugar water over the winter instead. The bees live just the same. Mr. Zhang, don't tell me you've never heard of that.</p>
+
+        <p class="sp-action">奶奶擦拭割蜜刀的动作骤然停下。氛围瞬间凝重。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Grandma's hand stops on the knife. The air goes heavy.</span></p>
+
+        <p class="sp-char">章奶奶 GRANDMA（缓缓转身 · turning slowly）</p>
+        <p class="sp-line">你这是糊弄生灵！</p>
+        <p class="sp-line en">That's cheating a living thing!</p>
+
+        <p class="sp-char">钱经理 QIAN</p>
+        <p class="sp-line">老太太，做生意嘛！</p>
+        <p class="sp-line en">Ma'am, it's business.</p>
+
+        <p class="sp-char">章建军 JIANJUN</p>
+        <p class="sp-line">娘……</p>
+        <p class="sp-line en">Ma...</p>
+
+        <p class="sp-char">章奶奶 GRANDMA（断然 · flatly）</p>
+        <p class="sp-line">那也不成！这是章家的规矩，是养蜂人的本分！</p>
+        <p class="sp-line en">Still no! This is the Zhang family's rule. It's what a beekeeper owes.</p>
+
+        <p class="sp-char">钱经理 QIAN（快步上前，拦在母子之间 · stepping in between mother and son）</p>
+        <p class="sp-line">老太太，特别尊重您的情怀。可市场它只认产量和销量。没订单、没收益，再好的规矩也撑不起日子，您说是不是？</p>
+        <p class="sp-line en">Ma'am, I have a lot of respect for what you stand for. But the market only counts yield and sales. No orders, no income, and the best rule in the world won't put food on the table. Am I wrong?</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">钱经理，"杀蜂取蜜"的市场，能长久？</p>
+        <p class="sp-line en">Manager Qian, a market that kills the bees for the honey. How long does that last?</p>
+
+        <p class="sp-char">钱经理 QIAN（一愣 · caught off guard）</p>
+        <p class="sp-line">什么意思？</p>
+        <p class="sp-line en">Meaning what?</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">糖水喂蜂，产出来的蜂蜜，检测也许查不出，可越冬存活率查得出。您要的是今年的销量，还是明年的货源？</p>
+        <p class="sp-line en">Sugar-fed honey might pass a lab test. Winter survival doesn't lie. Do you want this year's sales, or next year's supply?</p>
+
+        <p class="sp-char">钱经理 QIAN（笑 · laughing）</p>
+        <p class="sp-line">小姑娘，你懂市场吗？</p>
+        <p class="sp-line en">Kid, what do you know about the market?</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">邻村养殖户把蜜全都取了，全程喂糖水，四十箱蜂，开春只活了二十二箱，存活率刚过一半。我们家按奶奶的规矩留一半，二十七箱蜂，开春活了二十六箱，存活率百分之九十六。</p>
+        <p class="sp-line en">The farm in the next village stripped every hive and fed sugar water all winter. Forty hives, twenty-two alive by spring. Barely half. We followed Grandma's rule and left half. Twenty-seven hives, twenty-six alive. Ninety-six percent.</p>
+
+        <p class="sp-action">钱经理看了看小满，又转身冲着章建军。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Qian looks at Xiaoman, then turns back to Jianjun.</span></p>
+
+        <p class="sp-char">钱经理 QIAN（再次扬了扬合同 · waving the contract again）</p>
+        <p class="sp-line">章师傅，我可是带着诚意来的。平台明天统计订单量，时间可不等人啊，签还是不签？</p>
+        <p class="sp-line en">Mr. Zhang, I came here in good faith. The platform tallies orders tomorrow. The clock's running. Are you signing or not?</p>
+
+        <p class="sp-action">章建军犹豫了很久，缓缓伸手要接合同。小满一把抢过。<span class="en" style="display:block;font-style:italic;color:#8E9C88">A long hesitation. Jianjun slowly reaches for the contract. Xiaoman snatches it.</span></p>
+
+        <p class="sp-char">章建军 JIANJUN</p>
+        <p class="sp-line">小满！</p>
+        <p class="sp-line en">Xiaoman!</p>
+
+        <p class="sp-char">小满 XIAOMAN（快速翻看 · flipping through it）</p>
+        <p class="sp-line">爸，你看清楚。保底供货两千斤，若供货不足，按市场价三倍赔偿。我们总产不到一千斤，签了必然违约。</p>
+        <p class="sp-line en">Dad, read it. Guaranteed two thousand jin. Fall short and we pay three times market price in damages. We won't make a thousand this year. Sign this and we're in breach the day we sign.</p>
+
+        <p class="sp-char">钱经理 QIAN（坦然 · unbothered）</p>
+        <p class="sp-line">你们不签，有的是人想签！</p>
+        <p class="sp-line en">If you don't sign, plenty of people will.</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">那你去找。明年春天，他们的蜂死一半，我们的还在。到时候，你的蜜源还能保证吗？</p>
+        <p class="sp-line en">Then go find them. Next spring half their bees are dead and ours are still here. Where's your supply then?</p>
+
+        <p class="sp-char">钱经理 QIAN（打量着小满 · sizing her up）</p>
+        <p class="sp-line">你个小屁孩，要你操心！</p>
+        <p class="sp-line en">You're a kid. Mind your own business.</p>
+
+        <p class="sp-action">钱经理转身欲走，小满手机忽然连续弹出提示音。她低头看了一眼。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Qian turns to leave. Xiaoman's phone starts pinging, again and again. She glances down.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">钱经理，你刚才拍视频，我也在直播。弹幕都在问，能不能认养一箱蜂？能不能只买留半蜜？</p>
+        <p class="sp-line en">Manager Qian, while you were filming, I was streaming. The comments are all asking the same thing: can they adopt a hive? Can they buy only "leave-half" honey?</p>
+
+        <p class="sp-action">钱经理回头，盯住小满的手机屏幕。章建军和章奶奶也凑上来。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Qian turns back and stares at the screen. Jianjun and Grandma lean in too.</span></p>
+
+        <p class="sp-char">钱经理 QIAN（若有所思 · thinking）</p>
+        <p class="sp-line">认养……预付款吗？</p>
+        <p class="sp-line en">Adopt... they'd pay up front?</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">对。两千斤蜜取不出来，但是我们可以卖两千份认养资格。</p>
+        <p class="sp-line en">Yes. We can't pull two thousand jin of honey. We can sell two thousand adoptions.</p>
+
+        <p class="sp-char">钱经理 QIAN（沉默两秒 · after a beat）</p>
+        <p class="sp-line">有点意思……明天，拿方案来。如果更有赚头，我帮你们跟平台谈。</p>
+        <p class="sp-line en">Interesting... Bring me a plan tomorrow. If it makes more money, I'll take it to the platform myself.</p>
+
+        <p class="sp-action">钱经理下。小满和章奶奶在设备前忙碌起来。章建军独自站在中间蜂箱旁。他回头看了看章奶奶的老木桶，又看了看小满的智能蜂箱，慢慢靠近蜂箱。小满见状，挡在蜂箱前。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Qian exits. Xiaoman and Grandma get busy at the equipment. Jianjun stands alone by the middle hive. He looks back at his mother's old wooden hive, then at Xiaoman's smart hive, and slowly moves toward it. Xiaoman sees and steps in front of it.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">爸！你要干什么？</p>
+        <p class="sp-line en">Dad! What are you doing?</p>
+
+        <p class="sp-char">章建军 JIANJUN（一惊，随即沉脸 · startled, then hardening）</p>
+        <p class="sp-line">只取一点。凑上定金，先把贷款还了。</p>
+        <p class="sp-line en">Just a little. Enough for the deposit. Pay the loan first.</p>
+
+        <p class="sp-char">小满 XIAOMAN（不退 · not moving）</p>
+        <p class="sp-line">爸，您忘了太爷爷当年的教训了？</p>
+        <p class="sp-line en">Dad, did you forget what happened to Great-Grandpa?</p>
+
+        <p class="sp-action">章建军身形一滞。章奶奶走过来面对儿子。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Jianjun freezes. Grandma comes over and faces her son.</span></p>
+
+        <p class="sp-char">章奶奶 GRANDMA（放缓语速，娓娓道来 · slowly, telling it）</p>
+        <p class="sp-line">那年也是大旱。山外客商出高价收蜜，你爷爷一时动心，把蜜刮得干干净净。</p>
+        <p class="sp-line en">That was a drought year too. A buyer from outside the mountains offered a high price. Your grandfather gave in and scraped the hives clean.</p>
+
+        <p class="sp-char">小满 XIAOMAN（接过话头 · picking it up）</p>
+        <p class="sp-line">可那年冬天大雪封山，糖水冻成冰块，蜜蜂无粮可吃。开春雪化之后，所有蜜蜂全饿死在巢门口。太爷蹲在雪地里哭了一宿，之后就立下规矩，章家取蜜，必留一半。</p>
+        <p class="sp-line en">Then the snow sealed the mountain that winter. The sugar water froze solid and the bees had nothing. When the snow melted in spring, every bee was dead at the hive door. Great-Grandpa crouched in the snow and cried all night. After that he made the rule: when the Zhangs take honey, they leave half.</p>
+
+        <p class="sp-action">长静场。<span class="en" style="display:block;font-style:italic;color:#8E9C88">A long silence.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN（轻声 · softly）</p>
+        <p class="sp-line">爸，我不是要跟你争。我是怕我上完大学回来，山还在，蜂没了。你看——</p>
+        <p class="sp-line en">Dad, I'm not trying to fight you. I'm scared that when I come home from college, the mountain will still be here and the bees won't. Look...</p>
+
+        <p class="sp-action">小满给章建军看手机。<span class="en" style="display:block;font-style:italic;color:#8E9C88">She shows him her phone.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">第一组数据是越冬存活率。留半蜜，百分之九十六；取净喂糖，百分之五十二。第二组数据，山林生态。我们蜂场所在的山沟，因为有足量中蜂授粉，草木结籽率远高于隔壁没有蜂群养护的山沟。就是说，蜂群少了，花开得就少；花少了，明年的蜜就更少。</p>
+        <p class="sp-line en">First set: winter survival. Leave half, ninety-six percent. Strip and feed sugar, fifty-two. Second set: the forest. Our valley has enough native bees pollinating, so the plants set far more seed than the next valley over, where nobody keeps bees. Fewer bees means fewer flowers. Fewer flowers means even less honey next year.</p>
+
+        <p class="sp-char">章建军 JIANJUN（疲惫 · worn out）</p>
+        <p class="sp-line">道理我都懂！可是……</p>
+        <p class="sp-line en">I know all that! But...</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">爸，相信我！我们跟钱经理重新谈，按需采收，有多少蜜收多少蜜。再开一个认养项目，消费者认养一箱蜂，春看花、夏摇蜜、秋留半、冬回访，一年四季都有价值，扫码溯源，每一罐蜜都能查到采摘时间、山坡位置、对应蜂箱。别家卖的是蜜，我们卖的是诚信，是大山给人们的馈赠。</p>
+        <p class="sp-line en">Dad, trust me. We go back to Manager Qian and renegotiate: harvest to what the hives can give, no more. Then we start an adoption program. People adopt a hive. Spring, they watch the bloom. Summer, they spin honey. Fall, we leave half. Winter, they come back to visit. Every season is worth something. Scan a code and every jar tells you when it was harvested, which slope, which hive. Other people sell honey. We sell trust, and what the mountain gives.</p>
+
+        <p class="sp-char">章建军 JIANJUN</p>
+        <p class="sp-line">说的轻巧。谁会买？</p>
+        <p class="sp-line en">Easy to say. Who's going to buy that?</p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">已经有人买了。刚才那条视频，三万播放量，七百多人预约认养。预付款足够还下个月贷款。</p>
+        <p class="sp-line en">People already are. That video from just now has thirty thousand views and over seven hundred adoption sign-ups. The deposits cover next month's payment.</p>
+
+        <p class="sp-action">章建军沉默良久，缓缓走到老式木桶巢旁，学着母亲的样子，侧耳贴在蜂箱上静静聆听。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Jianjun is quiet for a long time. He walks slowly to the old wooden hive and, the way his mother does, lays his ear against it and listens.</span></p>
+
+        <p class="sp-char">章建军 JIANJUN（轻声 · quietly）</p>
+        <p class="sp-line">娘，小时候我总觉得您不懂变通，其实是我太浮躁。我不如小满啊！明天一早，我就去跟钱经理谈。就守住一条规矩——</p>
+        <p class="sp-line en">Ma, when I was a kid I thought you were just stubborn. It was me who couldn't sit still. Xiaoman's got more sense than I do. First thing tomorrow, I'll go talk to Qian. And we keep one rule...</p>
+
+        <p class="sp-char">章奶奶、小满 GRANDMA &amp; XIAOMAN（齐声坚定 · together）</p>
+        <p class="sp-line">取一半，留一半。</p>
+        <p class="sp-line en">Take half. Leave half.</p>
+
+        <p class="sp-char">章奶奶 GRANDMA（手掌轻覆木桶蜂箱 · resting a palm on the wooden hive）</p>
+        <p class="sp-line">小满，你知道你名字的寓意吗？你生在小满时节。小满，小满，万物渐满却不过满。</p>
+        <p class="sp-line en">Xiaoman, do you know what your name means? You were born at Xiaoman, the solar term of "small fullness." Everything filling up, but never quite full.</p>
+
+        <p class="sp-char">小满 XIAOMAN（将电脑轻放在木桶上，抬手覆住奶奶的手 · setting her laptop on the hive and covering Grandma's hand with hers）</p>
+        <p class="sp-line">奶奶，我想把这句话写进我的广告词里。这份属于大山和蜂群的道理，值得被更多人看见。</p>
+        <p class="sp-line en">Grandma, I want to put that line in our ad. What the mountain and the bees know, more people should see.</p>
+
+        <p class="sp-char">章奶奶 GRANDMA（轻笑 · a small laugh）</p>
+        <p class="sp-line">他们能懂吗？</p>
+        <p class="sp-line en">Will they understand?</p>
+
+        <p class="sp-char">小满 XIAOMAN（眉眼温柔 · gently）</p>
+        <p class="sp-line">敬畏自然、懂得取舍的道理，全世界通用。</p>
+        <p class="sp-line en">Respect nature. Know when to stop. That works in every language.</p>
+
+        <p class="sp-action">章建军也过来，将手覆在小满手上，平静了许多。灯光收拢，祖孙三代的三只手相互叠加，扶着蜂桶，温柔静谧。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Jianjun comes over and lays his hand on Xiaoman's, calmer now. The light narrows. Three hands, three generations, stacked on the old hive. Quiet, tender.</span></p>
+
+        <p class="sp-scene">尾声 · Epilogue</p>
+        <p class="sp-action">追光单独打亮小满。在她身后，章奶奶和章建军在背景中忙活着。<span class="en" style="display:block;font-style:italic;color:#8E9C88">A spotlight on Xiaoman alone. Behind her, Grandma and Jianjun keep working in the background.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN（面向观众，从容温柔 · to the audience, calm and warm）</p>
+        <p class="sp-line">自从我说服了我爸和钱经理，很多事情就变得不一样了。直播养蜂，让大家亲眼看见，一群蜜蜂如何奔波一整个春天，酝酿出一口自然成熟的蜂蜜。</p>
+        <p class="sp-line en">Once I'd won over my dad and Manager Qian, a lot of things changed. We stream the beekeeping now, so people can watch for themselves how a colony works a whole spring to make one mouthful of honey that ripened on its own.</p>
+
+        <p class="sp-action">小满拿出新手机。<span class="en" style="display:block;font-style:italic;color:#8E9C88">She takes out a new phone.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">钱经理后来成了我们的渠道合伙人。我家的欠款也还得差不多了，这不，我还买了最新款的手机，专门拍视频直播！</p>
+        <p class="sp-line en">Manager Qian ended up our sales partner. The loan's almost paid off. See? I even got the newest phone, just for filming and streaming.</p>
+
+        <p class="sp-action">小满拿着新手机这里拍拍，那里拍拍。<span class="en" style="display:block;font-style:italic;color:#8E9C88">She films a bit of this, a bit of that.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">对了，我们还开了研学营地。秋天，第一批研学的小朋友就要走进秦岭大山了。在这里，他们也能体验到守护蜂群、守护山林是什么感觉。</p>
+        <p class="sp-line en">Oh, and we opened a study camp. This fall the first group of kids comes up into the Qinling. They'll get to feel what it's like to look after the bees, and the mountain.</p>
+
+        <p class="sp-action">小满的手机响起，她接电话。<span class="en" style="display:block;font-style:italic;color:#8E9C88">Her phone rings. She answers.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN</p>
+        <p class="sp-line">刘叔叔，你好。什么？你们也想用新设备养蜂？没问题呀！我帮你们搭建。啊？你们还想开直播？那当然好了！这样，咱们养蜂人家干脆一起开一个直播号，就叫"留一半给山"，一起把"留一半口粮给蜂群，留一半生机给山林，留一半余地给岁岁年年"这个概念推广出去！嗯，嗯嗯，对，包在我小满身上，你们就放心吧！</p>
+        <p class="sp-line en">Hi, Uncle Liu. What? You want to try the new equipment too? Of course! I'll set it up for you. And you want to stream? Even better! Tell you what, all of us beekeeping families should run one channel together. Call it "Leave Half to the Mountain." Leave half the food for the bees, half the life for the forest, half the room for the years to come. Yes, yes, right, leave it to me. Don't worry.</p>
+
+        <p class="sp-action">小满挂断电话，面对观众。<span class="en" style="display:block;font-style:italic;color:#8E9C88">She hangs up and faces the audience.</span></p>
+
+        <p class="sp-char">小满 XIAOMAN（向观众 · to the audience）</p>
+        <p class="sp-line">这，就是我们养蜂人的故事。借助科技的力量，守护传统的风味，不仅让真正的好蜂蜜走进千家万户，也想让人与自然和谐共处的理念深入人心。往后，你们走进山林，不必急于寻找收获。不妨静下心、停一停、听一听，整座青山，都在嗡嗡诉说着生生不息的道理。</p>
+        <p class="sp-line en">This is our story, the beekeepers' story. We use technology to protect an old way of doing things, so real honey reaches more homes, and so the idea of living alongside nature reaches more people. Next time you walk into the mountains, don't rush to find what you can take. Slow down. Stop. Listen. The whole green mountain is humming the same thing: life goes on, if you let it.</p>
+
+        <p class="sp-action">灯光慢慢收拢成一点，最终黑场。<span class="en" style="display:block;font-style:italic;color:#8E9C88">The light shrinks to a single point, then black.</span></p>
+        <p class="sp-scene">剧终 · End</p>
+      </div>
+
+      <h4>为什么写成戏 <span class="en">Why a play</span></h4>
+      <p>田野里的冲突从来不是谁对谁错。奶奶说的"留一半"，在数据里有它的道理（见文章 i）；父亲多取蜜的理由，也是实打实的生计。论文里写不了这种撕扯，但舞台可以把三代人同时放在一张桌子上。
+        <span class="en" style="display:block;color:var(--ink-soft);margin-top:6px">Nobody in the field is simply wrong. Grandma's rule holds up in the data; Dad's reasons are real bills. A paper can't hold that tension. A stage can put three generations at one table.</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-art-half" role="dialog" aria-modal="true" aria-label="为什么只取一半">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">essays / 01-leave-half.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>专栏</b> 蜜蜂科普 · i</span><span><b>关键词</b> 古法养蜂 · 越冬 · 蜂群健康</span></div>
+      <h2>为什么取蜜只拿一半<span class="en">Why beekeepers take only half the honey</span></h2>
+      <div class="inshort"><b>In short</b>Honey is the colony's winter fuel, not a byproduct. Bees don't hibernate; they cluster and shiver to stay warm, burning honey the whole time. Strip the hive and the native bee, which is half-wild, will often just leave. "Take half" is a safety margin written as a rule.</div>
+      <figure><div class="fig ph ph-honey"><img src="media/hero-apiary.jpg" alt="" loading="lazy" style="object-position:50% 60%"></div><figcaption>秦岭蜂场 · The apiary</figcaption></figure>
+      <p class="lede">这是秦岭养蜂人最常说的一句话，也是最容易被当成"迷信"的一句话。其实它是一道算得很清楚的越冬题。</p>
+      <h4>蜜是蜂群的粮仓 <span class="en">Honey is the pantry</span></h4>
+      <p>蜂蜜是工蜂把花蜜反复酿造、脱水之后的储备粮。蜂群冬天不冬眠，它们挤成一团，靠抖动翅膀的肌肉发热，燃料就是蜜。一个中等规模的中华蜂群，一个冬天要吃掉十几公斤蜜；天越冷、冬越长，吃得越多。</p>
+      <h4>取光的代价 <span class="en">What happens when you take it all</span></h4>
+      <p>规模化养殖可以把蜜摇空，再用糖水补饲。对中华蜂这招经常失灵：它天性野，蜜源不够或者受干扰，容易整群弃巢飞走。老人没有传感器，但见过太多"取干净那年，蜂就走了"。于是把经验压成一条规矩：留一半。</p>
+      <blockquote>留下的一半，是过冬的燃料，也是来年春天的本钱。拿走的那一半，才是人该拿的。<span class="en">The half you leave is winter fuel and next spring's seed money. The half you take is the only half that was ever yours.</span></blockquote>
+      <h4>一年只割一次 <span class="en">One harvest a year</span></h4>
+      <p>秦岭和很多山区的土法蜂场还有一条规矩：一年只在秋末割一次，平时不喂糖。这样割出来的蜜成熟度高、水分低，天冷会自然结晶。市面上叫"土蜂蜜"的，多半说的就是这种。产量很低，但蜂群稳，不用年年买蜂。</p>
+      <h4>它和数据不矛盾 <span class="en">Rule and data agree</span></h4>
+      <p>在我们的项目里，蜂箱秤给的是精确数字："这箱还剩 21 公斤"。但秤回答不了"今年冬天多长""明年春天蜜源会不会被药打断"。"一半"其实是在不确定面前留的安全边际。所以在戏里我让爷爷和孙女各说对了一半：数字告诉你今天有多少，规矩告诉你该留多少。</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-art-qinling" role="dialog" aria-modal="true" aria-label="蜜蜂与秦岭">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">essays / 02-bees-and-qinling.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>专栏</b> 蜜蜂科普 · ii</span><span><b>关键词</b> 授粉 · 生物多样性 · 南北分界线</span></div>
+      <h2>一只中华蜂，对秦岭意味着什么<span class="en">What one small bee does for a whole mountain range</span></h2>
+      <div class="inshort"><b>In short</b>The Qinling divides north and south China and holds roughly 3,800 seed plants and 580+ animal species. The native honeybee is the one pollinator that bothers with the small, scattered mountain flowers; lose it and fruit, seed, and the animals that eat them go quiet, one link at a time.</div>
+      <figure><div class="fig ph ph-forest"><img src="media/river-walk.jpg" alt="" loading="lazy" style="object-position:50% 40%"></div><figcaption>秦岭北麓的溪流 · A stream on the north slope</figcaption></figure>
+      <p class="lede">秦岭是中国南北气候的分界线，也被叫作"野生动植物的基因库"：大约 3,800 种种子植物、580 多种野生动物住在这里。这座基因库的很多抽屉，是靠传粉昆虫在开关的。</p>
+      <h4>为什么偏偏是中华蜂 <span class="en">Why this bee, not any bee</span></h4>
+      <p>中华蜜蜂是在这片山里跟植物一起演化了上百万年的本土蜂。它能在七八度的低温下出巢，能用零星分布、花期短的山地蜜源，而这恰好是秦岭林下很多野花的开法。引进的西方蜜蜂更喜欢大片集中的蜜源（比如油菜田），对山里零散的野花看不上。换句话说，很多秦岭野花，只有中华蜂肯去。</p>
+      <h4>授粉、结果、种子、下一片林子 <span class="en">Pollination to forest</span></h4>
+      <p>蜂少了，第一反应不在蜂蜜，在果子和种子。林下灌木结实减少，吃果实的鸟兽食物减少，种子被带到远处的机会也跟着减少。生态学里叫"级联效应"：一环松了，后面几环跟着晃。</p>
+      <h4>一个容易被忽略的事实 <span class="en">What beekeepers care about</span></h4>
+      <p>一项对中国各地中华蜂养殖的调查发现，西北地区的蜂农最看重的不是产量，而是蜂群健康。这跟我们在秦岭听到的一样：养蜂人在意的首先是蜂能不能活下来、留下来。保护中华蜂在山里从来不只是产业问题，它和保护熊猫、朱鹮一样是保护一条链上的关键一环，只是它太小，不容易被看见。</p>
+      <blockquote>秦岭的名片是熊猫和朱鹮。但让这座山每年春天重新开花的，是一群没有名片的小东西。<span class="en">The pandas and the crested ibis get the postcards. The thing that makes the mountain bloom every spring doesn't.</span></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-art-human" role="dialog" aria-modal="true" aria-label="人类活动的影响">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">essays / 03-sprays-trails-tourists.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>专栏</b> 蜜蜂科普 · iii</span><span><b>关键词</b> 新烟碱类 · 旅游开发 · 胡蜂</span></div>
+      <h2>喷药、步道和游客：人怎么改变了蜂群<span class="en">Sprays, trails, tourists: how people change a hive</span></h2>
+      <div class="inshort"><b>In short</b>Our data: hive loss runs about 40% higher within 1 km of sprayed orchards and 25% higher near tourist trails. Sublethal pesticide doses don't kill bees outright; they make foragers dance less and bring home less. Trails add noise, hornets drawn to litter, and curious visitors opening boxes. The fix is mostly timing and distance, not keeping people out.</div>
+      <figure><div class="fig ph ph-honey"><img src="media/ngo-trail-pickup.jpg" alt="" loading="lazy" style="object-position:50% 55%"></div><figcaption>步道边的垃圾 · Litter along a trail</figcaption></figure>
+      <p class="lede">我们的数据说：离喷药果园 1 公里内的蜂场，损失高出约 40%；靠近旅游步道的，高出约 25%。这篇讲的是数字背后"怎么发生的"。</p>
+      <h4>① 农药：先让蜂不会说话 <span class="en">Pesticides quiet the dance</span></h4>
+      <p>果园常用的新烟碱类农药（吡虫啉、噻虫胺这些）作用在昆虫神经系统上。亚致死剂量不会当场杀死蜂，但会让它导航变差、记忆变差，最要紧的是：摇摆舞跳得少了。实验里，吃到农药的蜂摇摆舞次数掉了好几倍，还变得只采很甜的花蜜。外出的蜂没少，带回来的食物却少了很多。蜂群是慢慢饿瘦的，不是一夜之间被毒死的。所以蜂农只觉得"蜂少了"，说不清原因。</p>
+      <h4>② 步道：人的路线和蜂的路线叠在一起 <span class="en">Trails</span></h4>
+      <p>秦岭北麓不少蜂场建在林缘，正好也是徒步最好走的地方。人流带来三件事：噪音和震动让蜂群躁；游客丢的饮料、水果引来胡蜂（马蜂），它是中华蜂的头号天敌，秋天会成群攻击蜂箱；还有不少游客要"看蜂箱"，频繁开合，蜂群受扰。</p>
+      <h4>③ 两头都占 <span class="en">When both stack up</span></h4>
+      <p>最糟的蜂场往往两头都占：山下是喷药的果园，山上是旅游步道。觅食范围被药打断，蜂场本身又被人打扰，蜂群很难不走。</p>
+      <h4>能做什么 <span class="en">What actually helps</span></h4>
+      <ul>
+        <li><strong>改时间，不改用药：</strong>黄昏喷药，避开蜜蜂白天的采集高峰。两家果园已经同意。</li>
+        <li><strong>改位置：</strong>把蜂箱挪到离步道 100 米外的背风林缘，成本几乎为零。</li>
+        <li><strong>改认知：</strong>步道口放一块牌子：别给蜂"投喂"，别开蜂箱。这也是那出戏和这几篇文章存在的理由。</li>
+      </ul>
+      <blockquote>保护蜂群，不需要人离开山。只需要人稍微错开一点时间和距离。<span class="en">Protecting the bees doesn't mean keeping people off the mountain. It means shifting a few hours and a hundred meters.</span></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-ngo-game" role="dialog" aria-modal="true" aria-label="碳交易卡牌">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">fon / carbon-trading-card-game</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>角色</b> 游戏设计 · 现场主持</span><span><b>玩家</b> 120+</span><span><b>场合</b> 自然之友西安志愿者活动</span></div>
+      <h2>让 120 个人为"碳配额"吵起来<span class="en">A card game that gets 120 people arguing about carbon</span></h2>
+      <div class="inshort"><b>In short</b>Each player runs a company with the same carbon allowance. Producing earns money and burns allowance; overshoot and you pay. Allowances trade between players. Whoever has the most money wins, unless the whole table crosses the climate line, in which case everyone loses. People get it in about three rounds.</div>
+      <p class="lede">碳交易是环保政策里最难讲清的概念之一。与其讲十分钟 PPT，不如让大家打一局牌。</p>
+      <h4>规则 <span class="en">Rules</span></h4>
+      <ul>
+        <li>每位玩家扮演一家企业（钢厂、物流、风电场、农场），开局拿同样的碳配额。</li>
+        <li>每回合抽"生产卡"：生产赚钱，但消耗配额；超额排放要罚款。</li>
+        <li>配额可以在玩家之间买卖，这就是碳市场。减排技术卡能降单位消耗，但得先投钱。</li>
+        <li>结束时钱最多的赢。但全桌总排放超过"气候红线"，所有人一起输。</li>
+      </ul>
+      <h4>每一桌都会发生的事 <span class="en">What happens at every table</span></h4>
+      <p>前几轮大家拼命生产，配额涨价；中段有人囤配额抬价；最后几轮才有人想起气候红线，开始互相劝减排。有个玩家玩完说："原来碳市场是靠罚款和稀缺在推人。"这比任何讲解都清楚。</p>
+      <div class="note">ⓘ 此处放卡牌设计图、现场照片、规则手册。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-ngo-bird" role="dialog" aria-modal="true" aria-label="防鸟撞">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">fon / bird-window-collisions / 40-panes</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>任务</b> 防鸟撞贴纸施工</span><span><b>数量</b> 40 panes</span><span><b>规格</b> ≤ 5×5 cm 点阵</span></div>
+      <h2>让鸟看见玻璃<span class="en">Helping birds see the glass</span></h2>
+      <div class="inshort"><b>In short</b>Birds have flown for tens of millions of years; glass has existed for about a hundred. They can't tell a reflection from a tree. In North America window strikes kill hundreds of millions of birds a year, second only to cats. China's 2022 national survey logged 231 strikes across ~700 buildings. A dot pattern no wider than 5 cm apart, applied outside, tells birds "no way through." We did 40 panes.</div>
+      <p class="lede">鸟在地球上飞了几千万年，玻璃只有一百多年。它们分不清透明的玻璃和能飞过去的空间，也分不清玻璃里映出的树和真的树。</p>
+      <h4>问题有多大 <span class="en">How bad is it</span></h4>
+      <p>北美的估算是每年数亿只鸟死于撞玻璃，仅次于猫，是人为导致鸟类死亡的第二大原因。国内 2022 年的全国鸟撞调查，志愿者排查了近 700 栋建筑，记录到 231 起，其中有国家二级保护鸟类。昆山杜克大学的团队一个迁徙季就在校园记到 20 多起。西安正好在候鸟迁徙通道上。</p>
+      <h4>为什么是 5×5 厘米 <span class="en">Why a 5 cm grid</span></h4>
+      <p>防撞贴的原理很简单：图案够密，鸟就判断"这儿过不去"。研究和实践给的经验值是间距不超过 5 厘米，横竖都是，小鸟才不会想从缝里钻。贴在玻璃外侧最有效，内侧的图案容易被反光盖住。</p>
+      <h4>我们做了什么 <span class="en">What we did</span></h4>
+      <ul>
+        <li>先在建筑周围找撞击痕迹（羽印、羽毛堆），确定高风险的 40 块玻璃，多是连通两侧绿化的走廊和映着树的大窗。</li>
+        <li>按 5×5 cm 网格在外侧贴圆点，一块一块量。</li>
+        <li>迁徙季回访记录撞击次数，做前后对比。</li>
+      </ul>
+      <blockquote>这是我在校园专栏写的第一个选题。也是第一次发现，一篇文章和一卷贴纸，可以是同一件事的两头。<span class="en">It was my first column topic. It was also the first time I saw that an essay and a roll of stickers can be two ends of the same job.</span></blockquote>
+      <div class="note">ⓘ 此处放施工前后照片、玻璃分布图、回访数据。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-ngo-moss" role="dialog" aria-modal="true" aria-label="城墙苔藓">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">fon / city-wall-moss-survey</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>对象</b> 西安明城墙</span><span><b>方法</b> 样方记录 · 放大镜 · 图鉴</span></div>
+      <h2>六百年城墙上的微型森林<span class="en">A tiny forest on a 600-year-old wall</span></h2>
+      <div class="inshort"><b>In short</b>Xi'an's Ming wall went up in 1374–78. Tourists look at the gates; we crouched to look at the mortar joints. Moss has no roots and takes everything from air and rain, so it's a live reading of air quality and humidity. We logged position, aspect, seepage, and species for each patch, no sampling, nothing removed.</div>
+      <p class="lede">西安明城墙建于 1374 到 1378 年，是中国保存最完整的古城墙之一。游客看城楼和护城河，我们蹲下来看砖缝。</p>
+      <h4>为什么是苔藓 <span class="en">Why moss</span></h4>
+      <p>苔藓没有根，靠整个植株从空气和雨水里吸水分和养分，所以对空气质量和湿度特别敏感，是天然的"空气监测仪"。同一段城墙朝北和朝南、靠护城河和靠马路，长出的苔藓明显不一样。</p>
+      <h4>记了什么 <span class="en">What we recorded</span></h4>
+      <ul>
+        <li>位置：城墙段落、朝向、离地高度、离护城河距离。</li>
+        <li>生境：砖缝宽度、有没有渗水、日照时长。</li>
+        <li>物种：对照图鉴识别到属，拍微距存档；不采样，不动砖面。</li>
+      </ul>
+      <h4>它把三件事连在一起 <span class="en">Three things in one crack</span></h4>
+      <p>历史（明代的砖）、环境（今天的空气和水）、城市（马路和河）。一条砖缝里的苔藓刚好站在三者的交点上。这也是我在秦岭做蜂、在实验室看卫星时反复撞见的同一件事：自然从来不单独存在，它总是嵌在人的生活里。</p>
+      <div class="note">ⓘ 此处放物种清单、微距照片、城墙分布图。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-lab-method" role="dialog" aria-modal="true" aria-label="变化检测方法">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">lab / methods / change-detection.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>实验室</b> 西电秦岭生态监测实验室</span><span><b>数据</b> 多时相光学卫星影像</span><span><b>产出</b> 疑似变化点清单 → 护林员</span></div>
+      <h2>变化检测是怎么做的<span class="en">How change detection works</span></h2>
+      <div class="inshort"><b>In short</b>Healthy plants reflect near-infrared light and absorb red. NDVI turns that into a number from −1 to 1: dense forest near 0.8, bare rock near 0. Take two images of the same area in the same season, subtract, and anywhere NDVI drops sharply is where plants vanished: a landslide, a clearing, a new road. Then a human checks each flag before rangers hike in.</div>
+      <p class="lede">卫星不会告诉你"这里滑坡了"。它只给你两张不同时间的图。剩下的是让计算机找出哪里变了，再让人判断为什么。</p>
+      <h4>一个指数：NDVI <span class="en">One index</span></h4>
+      <p>健康植被强烈反射近红外、吸收红光。归一化植被指数 NDVI =（近红外 − 红光）/（近红外 + 红光），取值 −1 到 1：茂密森林接近 0.7–0.9，裸土岩石接近 0，水体为负。一片林地两期影像之间 NDVI 骤降，就是植被没了：可能是滑坡、砍伐、火烧，或者一条新路。</p>
+      <h4>我负责的流程 <span class="en">My part</span></h4>
+      <ul>
+        <li><strong>选图：</strong>同一季节（避开落叶期）、云量低的两期影像，裁出 1,200 km² 的监测区。</li>
+        <li><strong>预处理：</strong>大气校正、配准，保证两期像元对齐。</li>
+        <li><strong>差值：</strong>逐像元算 ΔNDVI，设阈值（比如下降超过 0.3），剔掉太小的斑块。</li>
+        <li><strong>人工复核：</strong>每个候选斑块我都会开高分辨率影像对照：陡坡上的扇形裸地多是滑坡，边界规整的多是人为清理。</li>
+        <li><strong>交付：</strong>导出坐标和截图清单，交给保护区巡护人员实地核实。</li>
+      </ul>
+      <div class="tscroll">
+      <table class="data-table">
+        <thead><tr><th>类型 Type</th><th>影像特征 Signature</th><th>数量 n</th></tr></thead>
+        <tbody>
+          <tr><td>疑似滑坡 · landslide</td><td>陡坡 · 扇形或条带状裸露 · 顺坡向下</td><td><b>—</b></td></tr>
+          <tr><td>林地空缺 / 清理 · clearing</td><td>边界规则 · 常邻近道路</td><td><b>—</b></td></tr>
+          <tr><td>合计 · total</td><td>已提交巡护核实</td><td><b>37</b></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">ⓘ 分项数量留给昕妍填；37 为项目记录总数。</div>
+      <h4>它和蜂场的关系 <span class="en">Back to the bees</span></h4>
+      <p>卫星看得见 1,200 平方公里，看不见一个蜂箱。田野看得见蜂箱，走不完一座山。两条线我都在做，就是想把两个尺度接上。</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-lab-life" role="dialog" aria-modal="true" aria-label="实验室记录">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">lab / notebook</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="win-video ph ph-sat" style="aspect-ratio:16/9">
+      <video src="media/lab-sandbox.mp4" poster="media/lab-sandbox-frame.jpg" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;background:#000"></video>
+      <div class="vlabel"><span>Xidian University · 2026</span><h3>秦岭保护数字化技术与应用联合实验室<span class="en">Joint Lab for Digital Qinling Conservation</span></h3></div>
+    </div>
+    <div class="article">
+      <div class="meta"><span><b>身份</b> Student Research Assistant</span><span><b>论文</b> 2 in review</span></div>
+      <div class="inshort"><b>In short</b>The first time I sat in front of the lab's big screen, the Qinling was a green-and-brown puzzle. Three months later I could point to the piece where my beekeepers live. I organized the change-detection results for 1,200 km², built the tables and maps, and drafted the Results sections for two papers now in review.</div>
+      <p class="lede">第一次坐在实验室的大屏前，秦岭是一张绿色和褐色的拼图。三个月后，我能在拼图里认出哪一块是我去过的蜂场。</p>
+      <h4>两篇在审论文里我做的部分 <span class="en">My part in the two papers</span></h4>
+      <ul>
+        <li>整理 1,200 km² 监测区的变化检测结果，做分类统计表和分布图。</li>
+        <li>起草结果（Results）段落，并为滑坡斑块补充实地核实情况。</li>
+      </ul>
+      <div class="note">ⓘ 论文题目、期刊、作者排序待补。</div>
+      <h4>和实验室老师聊聊 <span class="en">A conversation in the lab</span></h4>
+      <div class="gallery" style="grid-template-columns:1fr">
+        <figure class="ph ph-sat" style="aspect-ratio:16/9"><video src="media/lab-interview.mp4" poster="media/lab-interview-frame.jpg" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:#000"></video></figure>
+      </div>
+      <h4>学到的 <span class="en">What I learned</span></h4>
+      <p>遥感最难的一步不是算法，是把"疑似"变成"确认"。每一个红点背后，都要有人翻山过去看一眼。这让我更尊重护林员，也更明白我自己的田野访谈为什么有价值。</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-tek-what" role="dialog" aria-modal="true" aria-label="什么是 TEK">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">jieqi / 01-what-is-tek.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>分类</b> 科普</span><span><b>关键词</b> TEK · 物候 · 非遗</span></div>
+      <h2>什么是 TEK：写在节气里的气候档案<span class="en">Traditional ecological knowledge, kept in the calendar</span></h2>
+      <div class="inshort"><b>In short</b>The 24 solar terms split the sun's path into 15° steps; each term has three five-day "pentads" tied to a natural sign (first thunder, peach blossom, swallows return). The oldest Chinese phenology calendar is about 3,000 years old; UNESCO listed the solar terms as intangible heritage in 2016. Since 1960 almost every term has warmed; spring terms arrive earlier, autumn terms later.</div>
+      <p class="lede">Traditional Ecological Knowledge，传统生态知识。它不以论文的形式存在，而是以节气、农谚和耕作习惯一代代传下来。</p>
+      <h4>节气本身就是一份物候记录 <span class="en">The calendar is a record</span></h4>
+      <p>二十四节气把太阳在黄道上每走 15° 定为一个节气，每个节气分三候、五日一候，一年七十二候，每一候对应一种物候："东风解冻""桃始华""玄鸟至"。现存最早的物候历《夏小正》有三千年历史，记了 50 多种动植物的季节变化。2016 年，二十四节气列入联合国教科文组织人类非物质文化遗产名录。</p>
+      <h4>它为什么重要 <span class="en">Why it matters</span></h4>
+      <p>在气候变化的背景下，这些地方经验里有对本地生态极细的适应：什么时候播种、哪种草该留、哪种鸟来了意味着什么。它们没进过论文，但被几百年的收成反复验证过。</p>
+      <h4>它正在失准，也正在流失 <span class="en">Drifting, and fading</span></h4>
+      <p>研究者分析 1960 到 2008 年全国 500 多个气象站的逐日气温后发现：几乎每个节气都在显著升温；上半年升温阶段的节气整体提前，下半年降温阶段的节气整体推迟。华北平原的惊蛰和清明升温最明显，1998 年前后出现转暖突变。节气不再准，而记得老节气的人也在变老。</p>
+      <blockquote>一种方言消失，往往带走一整套气候智慧。我们做节气田野社，就是想在它消失前记下来，再跟数据放到一起。<span class="en">When a dialect dies, a whole climate archive usually goes with it. The club exists to write it down first, and set it next to the data.</span></blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-tek-method" role="dialog" aria-modal="true" aria-label="验证方法">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">jieqi / 02-method.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>团队</b> 14 classmates</span><span><b>样本</b> 20 households · 50+ cues</span><span><b>数据</b> 30 yrs local weather</span></div>
+      <h2>我们怎么验证一句农谚<span class="en">How we tested a farmer's saying</span></h2>
+      <div class="inshort"><b>In short</b>"Plant melons and beans around Qingming" is an instruction. To test it you turn it into a question: what temperature threshold does apricot bloom track, what day does that threshold now fall on, and how far has that day moved from the solar term over 30 years? Interview, code each cue, match it to a weather indicator, then bring the results back to the farms.</div>
+      <p class="lede">"清明前后，点瓜种豆"是一句指令。要验证它，得先把它拆成一个能被数据检验的问题。</p>
+      <h4>① 访谈 <span class="en">Interview</span></h4>
+      <p>分组走访 20 户农民，多在 55 岁以上。每人只问三件事：你按哪些节气干哪些活？你靠什么自然信号判断该动手了（燕子、杏花、地温）？这些年它们有没有变？</p>
+      <h4>② 编码 <span class="en">Code each cue</span></h4>
+      <p>50 多条线索整理成统一格式：节气 · 物候信号 · 农事 · 农户记忆里的"以前"和"现在"。例如：清明 · 杏花盛开 · 点瓜 · 以前清明当天 · 现在提前约 10 天。</p>
+      <h4>③ 对照 <span class="en">Match to weather</span></h4>
+      <p>很多物候信号跟积温有关。我们给每条线索设一个可检验的气象指标（比如"日均温稳定过 10℃ 的首日"），在 30 年逐日数据里找出它每年出现的日期，看它和对应节气之间的距离这些年怎么变。</p>
+      <div class="tscroll">
+      <table class="data-table">
+        <thead><tr><th>线索 Cue</th><th>气象指标 Indicator</th><th>30 年趋势 Trend</th><th>与农户记忆 Matches memory?</th></tr></thead>
+        <tbody>
+          <tr><td>惊蛰 · 第一声虫鸣</td><td>日均温稳定 ≥ 6℃ 首日</td><td><b>提前约 1 周 · ~1 wk earlier</b></td><td>一致 yes</td></tr>
+          <tr><td>清明 · 杏花盛开</td><td>春季积温达阈值日</td><td><b>提前 1–2 周 · 1–2 wks earlier</b></td><td>一致 yes</td></tr>
+          <tr><td>霜降 · 初霜</td><td>首个最低温 ≤ 0℃ 日</td><td><b>推迟约 1 周 · ~1 wk later</b></td><td>一致 yes</td></tr>
+          <tr><td>小满 · 麦粒灌浆</td><td>—</td><td>无明显变化 · no change</td><td>一致 yes</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note">ⓘ 表格为示例格式；指标、阈值和结果请换成节气田野社的实际数据。</div>
+      <h4>④ 回访 <span class="en">Bring it back</span></h4>
+      <p>最后把 40 页指南送回 200 户农家。老人最在意的不是"你们验证了我"，而是"原来我的感觉是对的，还能写下来"。</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-tek-shift" role="dialog" aria-modal="true" aria-label="挪动了的节气">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">jieqi / 03-twelve-shifted.md</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>结果</b> 12 of 50+ cues shifted</span><span><b>幅度</b> 1–2 weeks</span></div>
+      <h2>挪了的 12 条：从惊蛰到霜降<span class="en">The twelve that moved</span></h2>
+      <div class="inshort"><b>In short</b>Not every saying is off. About a quarter of our cues have drifted, and all in the same direction: spring signs come earlier, autumn and winter signs come later. For a farmer that's the difference between a crop caught by a late frost and one that missed its growing window.</div>
+      <p class="lede">不是所有老话都失准。50 多条里大约四分之一明显偏移，而且方向惊人地一致：春天的信号在提前，秋冬的信号在推迟。</p>
+      <h4>春季：整体提前 <span class="en">Spring: earlier</span></h4>
+      <p>惊蛰的虫鸣、清明的杏花、谷雨前后的燕子，农户普遍说"早了一个星期到十来天"。跟全国尺度的研究一致：升温阶段的节气对应的物候整体提前。</p>
+      <h4>秋冬：整体推迟 <span class="en">Autumn, winter: later</span></h4>
+      <p>霜降的初霜、小雪前后的第一场雪，老人记忆里"越来越晚"。符合小寒、大寒气候特征的天数也在减少，冬天在变短。</p>
+      <h4>为什么这对农户很要紧 <span class="en">Why it matters to a farm</span></h4>
+      <p>节气指导的是动手的时间：播种早了会被倒春寒打掉，晚了错过积温。节气和物候错位之后，老农谚可能反过来误导年轻一代。我们的指南做的事，就是在每条老话旁边标上"现在大约提前/推迟多少天"。</p>
+      <div class="note">ⓘ 此处放 12 条线索的完整列表和每条的偏移天数。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-tek-guide" role="dialog" aria-modal="true" aria-label="节气指南">
+  <div class="veil-bg" data-close></div>
+  <div class="win">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">jieqi / field-guide-en-cn.pdf</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article">
+      <div class="meta"><span><b>篇幅</b> 40 pages</span><span><b>语言</b> 中英对照 EN/CN</span><span><b>发放</b> 200 farms + ESS class</span></div>
+      <h2>《节气物候田野指南》<span class="en">The Solar-Term Field Guide</span></h2>
+      <div class="inshort"><b>In short</b>One page per term: the farmer's own words (dialect kept), what to watch or listen for, where that sign now falls in 30 years of data, and what to do by today's signs rather than the calendar date. Chinese for the farms and their families, English for my school's ESS class and anyone who wants to cite it.</div>
+      <p class="lede">一本给农户看的书，和一本给同学看的书，其实是同一本。</p>
+      <h4>每个节气一页 <span class="en">One page per term</span></h4>
+      <ul>
+        <li>老话：农户原话，保留方言。</li>
+        <li>物候信号：看什么、听什么。</li>
+        <li>30 年数据：这个信号现在大约在哪一天，比节气早还是晚。</li>
+        <li>农事建议：按今天的物候，不按日历。</li>
+      </ul>
+      <h4>为什么要双语 <span class="en">Why bilingual</span></h4>
+      <p>中文给农户和家人；英文给学校的 ESS（Environmental Systems and Societies）课，也给以后想引用它的人。TEK 要被记录，也要能被读到。</p>
+      <div class="note">ⓘ 此处嵌入指南封面、内页截图或下载链接。</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-term" role="dialog" aria-modal="true" aria-label="节气">
+  <div class="veil-bg" data-close></div>
+  <div class="win" style="max-width:640px">
+    <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url" id="term-url">jieqi / term</span><button class="win-close" data-close aria-label="关闭">×</button></div>
+    <div class="article" id="term-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var TERMS=[
+    ["立春","Start of Spring","Feb 4","东风解冻 · 蛰虫始振","老话：立春一日，水暖三分。",0],
+    ["雨水","Rain Water","Feb 19","獭祭鱼 · 鸿雁来","老话：雨水有雨庄稼好。",0],
+    ["惊蛰","Awakening of Insects","Mar 6","桃始华 · 仓庚鸣","访谈：第一声虫鸣比以前早了约一周。Farmers: first insect calls about a week earlier.",1],
+    ["春分","Spring Equinox","Mar 21","玄鸟至 · 雷乃发声","访谈：燕子回来得早了。Swallows return earlier.",1],
+    ["清明","Pure Brightness","Apr 5","桐始华 · 虹始见","访谈：杏花比老话早开 1–2 周。Apricot bloom 1–2 weeks early.",1],
+    ["谷雨","Grain Rain","Apr 20","萍始生 · 鸣鸠拂其羽","访谈：点瓜种豆提前。Melon and bean planting moved up.",1],
+    ["立夏","Start of Summer","May 6","蝼蝈鸣 · 蚯蚓出","老话：立夏看夏。",0],
+    ["小满","Grain Buds","May 21","苦菜秀 · 靡草死","访谈：麦粒灌浆时间没明显变化。No clear change.",0],
+    ["芒种","Grain in Ear","Jun 6","螳螂生 · 鵙始鸣","老话：芒种忙，忙着种。",0],
+    ["夏至","Summer Solstice","Jun 21","鹿角解 · 蝉始鸣","访谈：蝉鸣提前。Cicadas start earlier.",1],
+    ["小暑","Minor Heat","Jul 7","温风至 · 蟋蟀居壁","老话：小暑大暑，上蒸下煮。",0],
+    ["大暑","Major Heat","Jul 23","腐草为萤 · 土润溽暑","访谈：高温天数增多。More hot days.",1],
+    ["立秋","Start of Autumn","Aug 8","凉风至 · 白露降","访谈：凉风来得晚了。Cool wind comes later.",1],
+    ["处暑","End of Heat","Aug 23","鹰乃祭鸟 · 天地始肃","老话：处暑不出头，割了喂老牛。",0],
+    ["白露","White Dew","Sep 8","鸿雁来 · 玄鸟归","访谈：燕子走得晚了。Swallows leave later.",1],
+    ["秋分","Autumn Equinox","Sep 23","雷始收声 · 蛰虫坯户","老话：秋分种麦正当时。",0],
+    ["寒露","Cold Dew","Oct 8","鸿雁来宾 · 菊有黄华","老话：寒露种麦不嫌早。",0],
+    ["霜降","Frost's Descent","Oct 23","豺乃祭兽 · 草木黄落","访谈：初霜推迟约一周。First frost about a week later.",1],
+    ["立冬","Start of Winter","Nov 7","水始冰 · 地始冻","访谈：地冻得晚。Ground freezes later.",1],
+    ["小雪","Minor Snow","Nov 22","虹藏不见 · 天气上升","访谈：第一场雪越来越晚。First snow later every year.",1],
+    ["大雪","Major Snow","Dec 7","鹖鴠不鸣 · 虎始交","老话：大雪封地。",0],
+    ["冬至","Winter Solstice","Dec 22","蚯蚓结 · 麋角解","老话：冬至数九。",0],
+    ["小寒","Minor Cold","Jan 6","雁北乡 · 鹊始巢","老话：小寒大寒，冷成冰团。",0],
+    ["大寒","Major Cold","Jan 20","鸡始乳 · 征鸟厉疾","访谈：真正严寒的天数在减少。Fewer truly cold days.",1]
+  ];
+  var grid=document.getElementById('terms'),spokes=document.getElementById('spokes'),NS='http://www.w3.org/2000/svg';
+  TERMS.forEach(function(t,i){
+    var b=document.createElement('button');b.className='term'+(t[5]?' shift':'');b.setAttribute('data-term',i);
+    b.innerHTML='<b>'+t[0]+'</b><small>'+t[1]+'</small>';grid.appendChild(b);
+    var a=(i/24)*Math.PI*2-Math.PI/2;
+    var l=document.createElementNS(NS,'line');
+    l.setAttribute('x1',Math.cos(a)*56);l.setAttribute('y1',Math.sin(a)*56);l.setAttribute('x2',Math.cos(a)*100);l.setAttribute('y2',Math.sin(a)*100);
+    l.setAttribute('stroke',t[5]?'var(--honey)':'var(--moss-soft)');l.setAttribute('stroke-width',t[5]?'1.6':'.8');spokes.appendChild(l);
+    var c=document.createElementNS(NS,'circle');c.setAttribute('cx',Math.cos(a)*100);c.setAttribute('cy',Math.sin(a)*100);c.setAttribute('r',t[5]?3.2:2);c.setAttribute('fill',t[5]?'var(--honey)':'var(--moss)');spokes.appendChild(c);
+    var tx=document.createElementNS(NS,'text');tx.setAttribute('x',Math.cos(a)*112);tx.setAttribute('y',Math.sin(a)*112+3);tx.setAttribute('text-anchor','middle');tx.setAttribute('font-size','7');tx.setAttribute('fill','var(--ink-soft)');tx.setAttribute('font-family','Noto Serif SC,serif');tx.textContent=t[0];spokes.appendChild(tx);
+  });
+
+  var stack=[];
+  function openModal(id){var m=document.getElementById(id);if(!m)return;m.style.zIndex=200+stack.length;m.classList.add('open');stack.push(m);document.body.classList.add('locked');var c=m.querySelector('.win-close');if(c)c.focus();}
+  function closeTop(){var m=stack.pop();if(m)m.classList.remove('open');if(!stack.length)document.body.classList.remove('locked');}
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-modal]');if(t){e.preventDefault();openModal(t.getAttribute('data-modal'));return;}
+    var tm=e.target.closest('[data-term]');
+    if(tm){var d=TERMS[+tm.getAttribute('data-term')];
+      document.getElementById('term-url').textContent='jieqi / '+d[1].toLowerCase().replace(/[^a-z]+/g,'-');
+      document.getElementById('term-body').innerHTML=
+        '<div class="meta"><span><b>节气</b> '+d[0]+' · '+d[1]+'</span><span><b>时间</b> ~'+d[2]+'</span>'+(d[5]?'<span><b>状态</b> 已偏移 shifted</span>':'')+'</div>'+
+        '<h2>'+d[0]+'<span class="en">'+d[1]+'</span></h2>'+
+        '<h4>七十二候 <span class="en">Pentads</span></h4><p>'+d[3]+'</p>'+
+        '<h4>'+(d[5]?'田野记录 <span class="en">Field note</span>':'农谚 <span class="en">Saying</span>')+'</h4><p>'+d[4]+'</p>'+
+        '<div class="note">ⓘ 节气田野社记录填充：访谈原话、照片、对应气象指标。</div>';
+      openModal('m-term');return;}
+    if(e.target.closest('[data-close]'))closeTop();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&stack.length)closeTop();});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window&&!reduce){
+    var els=document.querySelectorAll('.reveal');
+    els.forEach(function(el){if(el.getBoundingClientRect().top>window.innerHeight)el.classList.add('pre');});
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.remove('pre');x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1});
+    els.forEach(function(el){io.observe(el);});
+  }
+
+  var hero=document.querySelector('.hero'),photo=document.getElementById('heroPhoto'),mx=0;
+  function para(){if(reduce||!photo)return;var y=window.scrollY;if(y>hero.offsetHeight)return;
+    photo.style.transform='translate3d('+(mx*-8)+'px,'+(y*.18)+'px,0)';}
+  window.addEventListener('scroll',para,{passive:true});
+  hero.addEventListener('mousemove',function(e){mx=(e.clientX/window.innerWidth-.5);para();});
+  hero.addEventListener('mouseleave',function(){mx=0;para();});
+
+  function tilt(el,maxDeg,base){
+    if(!el||reduce||!window.matchMedia('(hover:hover)').matches)return;
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();var px=(e.clientX-r.left)/r.width-.5;var py=(e.clientY-r.top)/r.height-.5;
+      el.style.transform=(base?'':'perspective(900px) ')+'rotateX('+(-py*maxDeg+(base?3:0))+'deg) rotateY('+(px*maxDeg+(base?-10:0))+'deg) translateY(-3px)';});
+    el.addEventListener('mouseleave',function(){el.style.transform='';});
+  }
+  document.querySelectorAll('.tile').forEach(function(t){tilt(t,6,false);});
+})();
+</script>
+
+</body>
+</html>
