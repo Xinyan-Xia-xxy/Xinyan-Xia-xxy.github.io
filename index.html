@@ -411,6 +411,7 @@ h1,h2,h3,h4{text-wrap:balance}
 .snap .main .tag{position:absolute;left:12px;top:12px;z-index:4;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:#F1F5EA;background:rgba(16,27,20,.62);padding:5px 9px;border-radius:999px;backdrop-filter:blur(4px)}
 .snap .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px}
 .snap .thumbs .ph{aspect-ratio:4/3;border-radius:8px}
+.snap .thumbs .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3;background:#000}
 .snap .thumbs .ph img{transition:transform .6s}
 .snap .thumbs .ph:hover img{transform:scale(1.05)}
 .snap .txt{padding:14px 18px 18px}
@@ -488,8 +489,8 @@ h1,h2,h3,h4{text-wrap:balance}
         <span class="tag">Singing · 唱歌</span>
       </div>
       <div class="thumbs">
-        <div class="ph ph-stage"><img src="media/singing-stage-wide.jpg" alt="" loading="lazy"></div>
-        <div class="ph ph-stage"><img src="media/singing-stage-close.jpg" alt="" loading="lazy"></div>
+        <div class="ph ph-stage"><video src="media/singing-stage-v2.mp4" poster="media/singing-stage-v2.jpg" aria-label="舞台演唱" controls playsinline preload="metadata"></video></div>
+        <div class="ph ph-stage"><video src="media/singing-rehearsal-v2.mp4" poster="media/singing-rehearsal-v2.jpg" aria-label="乐队排练" controls playsinline preload="metadata"></video></div>
       </div>
       <div class="txt"><b>草坪音乐节，校园的舞台</b>
         <p>三年都去试了音，三年都站上去了。我家人都爱唱，我是跟着唱大的。<span class="en">Three years of auditions, three years on that stage. Everyone in my family sings; I grew up singing along.</span></p></div>
@@ -553,7 +554,7 @@ h1,h2,h3,h4{text-wrap:balance}
 
         <div class="col-video">
           <!-- ▼ 换视频：把文件放进 media/ 并改 src ▼ -->
-          <video src="media/field-beekeeper.mp4" poster="media/field-beekeeper-frame.jpg" controls playsinline preload="metadata"></video>
+          <video src="media/field-beekeeper-v2.mp4" poster="media/field-beekeeper-v2.jpg" controls playsinline preload="metadata"></video>
           <span class="vtag">蜂农访谈 · Beekeeper interview</span>
         </div>
 
