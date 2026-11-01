@@ -605,7 +605,7 @@ h1,h2,h3,h4{text-wrap:balance}
         <div class="tiles one">
           <button class="tile" data-modal="m-play">
             <div class="media ph ph-stage">
-              <!-- 戏剧封面图：想换成剧照时，在这里加一行 <img src="media/play-cover.jpg" alt=""> -->
+              <img src="media/play-cover.jpg" alt="《留一半给山》戏剧演出画面" loading="lazy">
               <div class="veil"></div>
               <span class="badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>戏剧 Play</span>
               <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
@@ -916,15 +916,12 @@ h1,h2,h3,h4{text-wrap:balance}
   <div class="win">
     <div class="win-bar"><div class="dots"><i></i><i></i><i></i></div><span class="win-url">stage / leave-half-to-the-mountain</span><button class="win-close" data-close aria-label="关闭">×</button></div>
     <div class="win-video ph ph-stage">
-      <!-- ▼ 戏剧成片：把视频文件放进 media/ 文件夹，命名为 play.mp4，再把下面这一行的注释去掉即可 ▼
-      <video src="media/play.mp4" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:4;background:#000"></video>
-      -->
-      <div class="veil"></div>
-      <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-      <div class="vlabel"><span>Original play · 原创戏剧</span><h3>《留一半给山》<span class="en">Leave Half to the Mountain</span></h3></div>
+      <video src="https://github.com/Xinyan-Xia-xxy/Xinyan-Xia-xxy.github.io/releases/download/play-2026-11-01/leave-half-to-the-mountain.mp4" poster="media/play-cover.jpg" aria-label="《留一半给山》完整成片，15分40秒" controls playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:4;background:#000">
+        您的浏览器不支持视频播放。<a href="https://github.com/Xinyan-Xia-xxy/Xinyan-Xia-xxy.github.io/releases/download/play-2026-11-01/leave-half-to-the-mountain.mp4">下载完整成片</a>
+      </video>
     </div>
     <div class="article">
-      <div class="meta"><span><b>类型</b> 原创生态戏剧 · 独幕 · 约 15 分钟</span><span><b>身份</b> 编剧</span><span><b>人物</b> 4 人</span></div>
+      <div class="meta"><span><b>类型</b> 原创生态戏剧 · 独幕 · 15 分 40 秒</span><span><b>身份</b> 编剧</span><span><b>人物</b> 4 人</span></div>
       <div class="inshort"><b>In short</b>One beekeeping family in the Qinling, three generations. Grandma keeps the old rule of taking only half the honey. Dad, behind on a loan, wants to turn the apiary into a business. Eighteen-year-old Xiaoman brings in sensors, data, and a livestream. Then a drought year, a buyer with a 2,000-jin order, and one question: this year's sales, or next year's bees?</div>
       <p class="lede">一个秦岭养蜂世家，三代人守着同一片山林，用完全不同的方式养蜂。大旱之年，收购商带着两千斤的订单上门，提出把蜜取净、冬天喂糖浆。奶奶守规矩，父亲要还贷，小满拿出越冬存活率和一场直播，让所有人看见另一种可能。</p>
 
@@ -1585,7 +1582,7 @@ h1,h2,h3,h4{text-wrap:balance}
 
   var stack=[];
   function openModal(id){var m=document.getElementById(id);if(!m)return;m.style.zIndex=200+stack.length;m.classList.add('open');stack.push(m);document.body.classList.add('locked');var c=m.querySelector('.win-close');if(c)c.focus();}
-  function closeTop(){var m=stack.pop();if(m)m.classList.remove('open');if(!stack.length)document.body.classList.remove('locked');}
+  function closeTop(){var m=stack.pop();if(m){m.querySelectorAll('video').forEach(function(v){v.pause();});m.classList.remove('open');}if(!stack.length)document.body.classList.remove('locked');}
   document.addEventListener('click',function(e){
     var t=e.target.closest('[data-modal]');if(t){e.preventDefault();openModal(t.getAttribute('data-modal'));return;}
     var tm=e.target.closest('[data-term]');
